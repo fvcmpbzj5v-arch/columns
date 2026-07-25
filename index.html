@@ -29,8 +29,8 @@ html{
 
 body{
     margin:0;
-    background:#f3efe7;
-    color:#28312d;
+    background:#f5f5f7;
+    color:#1d1d1f;
 
     font-family:
     -apple-system,
@@ -42,78 +42,68 @@ body{
 
 .page{
     width:100%;
-    max-width:720px;
+    max-width:760px;
     min-height:100vh;
     margin:auto;
-    background:#fbf8f1;
-    box-shadow:0 0 30px rgba(68,57,40,.08);
+    background:#ffffff;
 }
 
 
 /* ヘッダー */
 
 header{
-    padding:48px 24px 34px;
+    padding:56px 24px 36px;
     text-align:center;
-    border-bottom:1px solid #d9d1c3;
-}
-
-.site-label{
-    margin:0 0 12px;
-    color:#758477;
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:.78rem;
-    font-weight:bold;
-    letter-spacing:3px;
 }
 
 .site-name{
     margin:0;
-    color:#253b32;
-    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
+    color:#111111;
     font-size:2rem;
-    line-height:1.35;
-    letter-spacing:.03em;
+    font-weight:700;
+    letter-spacing:-.03em;
 }
 
 .site-name-en{
     margin:10px 0 0;
-    color:#8b897f;
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:.88rem;
-    letter-spacing:2px;
+    color:#86868b;
+    font-size:.86rem;
+    letter-spacing:.08em;
 }
 
 
 /* メイン */
 
 main{
-    padding:42px 22px 55px;
+    padding:12px 20px 64px;
 }
 
-.page-title-area{
+.hero{
+    padding:38px 8px 48px;
     text-align:center;
 }
 
-.page-title{
+.hero-label{
+    margin:0 0 12px;
+    color:#2563eb;
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.16em;
+}
+
+.hero-title{
     margin:0;
-    color:#26382f;
-    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
-    font-size:2rem;
-    font-weight:600;
+    color:#1d1d1f;
+    font-size:2.35rem;
+    line-height:1.2;
+    letter-spacing:-.04em;
 }
 
-.title-line{
-    width:42px;
-    height:2px;
-    margin:18px auto;
-    background:#9a7251;
-}
-
-.intro{
-    margin:0 auto 42px;
-    color:#6e716b;
-    font-size:.95rem;
+.hero-text{
+    max-width:520px;
+    margin:20px auto 0;
+    color:#6e6e73;
+    font-size:1rem;
     line-height:1.9;
 }
 
@@ -122,67 +112,61 @@ main{
 
 .featured-card{
     display:block;
-    position:relative;
-    overflow:hidden;
-    margin-bottom:34px;
-    padding:32px 26px 28px;
-    background:#304a3e;
-    border-radius:4px;
-    color:#fff;
+    margin-bottom:44px;
+    padding:34px 28px;
+    background:#f5f5f7;
+    border-radius:28px;
+    color:#1d1d1f;
     text-decoration:none;
-    box-shadow:0 12px 25px rgba(43,59,50,.16);
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.featured-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 36px rgba(0,0,0,.08);
 }
 
 .featured-label{
     display:inline-block;
-    margin-bottom:24px;
-    padding:6px 10px;
-    border:1px solid rgba(255,255,255,.55);
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:.7rem;
-    letter-spacing:2px;
+    margin-bottom:18px;
+    color:#2563eb;
+    font-size:.74rem;
+    font-weight:700;
+    letter-spacing:.12em;
 }
 
 .featured-card h2{
-    margin:0 0 15px;
-    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
-    font-size:1.65rem;
-    line-height:1.5;
+    margin:0;
+    font-size:1.75rem;
+    line-height:1.45;
+    letter-spacing:-.02em;
 }
 
 .featured-card p{
-    margin:0;
-    color:#e2e9e4;
-    font-size:.93rem;
+    margin:16px 0 0;
+    color:#6e6e73;
+    font-size:.96rem;
     line-height:1.9;
 }
 
 .read-more{
     display:block;
-    margin-top:24px;
-    font-size:.84rem;
-    font-weight:bold;
-    letter-spacing:.06em;
+    margin-top:22px;
+    color:#2563eb;
+    font-size:.9rem;
+    font-weight:600;
 }
 
 
-/* 一覧見出し */
+/* 一覧タイトル */
 
 .section-title{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin:42px 0 22px;
-    color:#304238;
-    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
-    font-size:1.25rem;
-}
-
-.section-title::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:#d6cdbc;
+    margin:0 0 18px;
+    color:#1d1d1f;
+    font-size:1.45rem;
+    letter-spacing:-.02em;
 }
 
 
@@ -195,54 +179,63 @@ main{
 
 .column-card{
     display:block;
-    padding:24px 22px;
-    background:#fffdf9;
-    border:1px solid #e4dccf;
-    border-left:4px solid #9a7251;
-    border-radius:3px;
-    color:#28312d;
+    padding:26px 24px;
+    background:#ffffff;
+    border:1px solid #e8e8ed;
+    border-radius:22px;
+    color:#1d1d1f;
     text-decoration:none;
-    transition:.2s;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
 }
 
-.column-card:active{
-    transform:scale(.99);
+.column-card:hover{
+    transform:translateY(-2px);
+    border-color:#d2d2d7;
+    box-shadow:0 10px 28px rgba(0,0,0,.06);
 }
 
 .column-meta{
-    margin-bottom:8px;
-    color:#929085;
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:.72rem;
-    letter-spacing:.08em;
+    margin-bottom:10px;
+    color:#86868b;
+    font-size:.74rem;
+    letter-spacing:.05em;
 }
 
 .column-card h3{
-    margin:0 0 10px;
-    color:#2d4036;
-    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
-    font-size:1.25rem;
+    margin:0;
+    font-size:1.3rem;
     line-height:1.5;
+    letter-spacing:-.01em;
 }
 
 .column-card p{
-    margin:0;
-    color:#6c706a;
-    font-size:.9rem;
-    line-height:1.8;
+    margin:12px 0 0;
+    color:#6e6e73;
+    font-size:.92rem;
+    line-height:1.85;
+}
+
+.card-link{
+    display:block;
+    margin-top:16px;
+    color:#2563eb;
+    font-size:.86rem;
+    font-weight:600;
 }
 
 
-/* トップへ戻る */
+/* 戻るリンク */
 
 .back-link{
     display:block;
-    width:fit-content;
-    margin:48px auto 0;
-    padding-bottom:5px;
-    border-bottom:1px solid #7b705f;
-    color:#5d5a50;
+    margin-top:52px;
+    text-align:center;
+    color:#2563eb;
     font-size:.9rem;
+    font-weight:600;
     text-decoration:none;
 }
 
@@ -251,27 +244,36 @@ main{
 
 footer{
     padding:30px 20px;
-    background:#293a32;
-    color:#cfd7d1;
+    border-top:1px solid #eeeeee;
+    color:#86868b;
     text-align:center;
-    font-family:Georgia,"Times New Roman",serif;
     font-size:.78rem;
-    letter-spacing:.08em;
 }
+
+
+/* PC表示 */
 
 @media(min-width:600px){
 
     header{
-        padding-top:60px;
+        padding-top:68px;
     }
 
     main{
-        padding-left:45px;
-        padding-right:45px;
+        padding-left:42px;
+        padding-right:42px;
+    }
+
+    .hero{
+        padding-top:50px;
+    }
+
+    .hero-title{
+        font-size:3rem;
     }
 
     .featured-card{
-        padding:40px 36px 34px;
+        padding:42px 38px;
     }
 
 }
@@ -286,10 +288,6 @@ footer{
 
 <header>
 
-    <p class="site-label">
-        RUNNING JOURNAL
-    </p>
-
     <h1 class="site-name">
         由比ヶ浜ランニングラボ
     </h1>
@@ -303,26 +301,29 @@ footer{
 
 <main>
 
-    <div class="page-title-area">
+    <section class="hero">
 
-        <h2 class="page-title">
-            コラム
-        </h2>
-
-        <div class="title-line"></div>
-
-        <p class="intro">
-            ランニングや陸上競技に役立つ知識を、<br>
-            わかりやすく丁寧に紹介します。
+        <p class="hero-label">
+            COLUMN
         </p>
 
-    </div>
+        <h2 class="hero-title">
+            走ることを、<br>
+            もう少し深く。
+        </h2>
+
+        <p class="hero-text">
+            ランニングや陸上競技に役立つ知識を、
+            シンプルに、わかりやすく紹介します。
+        </p>
+
+    </section>
 
 
     <a href="./vdot/" class="featured-card">
 
         <span class="featured-label">
-            FEATURED
+            FEATURED COLUMN
         </span>
 
         <h2>
@@ -352,7 +353,7 @@ footer{
         <a href="./vdot/" class="column-card">
 
             <div class="column-meta">
-                2026.07.25　RUNNING SCIENCE
+                2026.07.25
             </div>
 
             <h3>
@@ -363,6 +364,10 @@ footer{
                 VDOTの意味や計算の考え方、
                 ランニングへの活用方法を紹介します。
             </p>
+
+            <span class="card-link">
+                詳しく見る →
+            </span>
 
         </a>
 
