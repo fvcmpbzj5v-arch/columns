@@ -8,13 +8,13 @@
 content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="由比ヶ浜ラボのランニング・陸上競技コラム一覧です。">
+content="由比ヶ浜ランニングラボのランニング・陸上競技コラム一覧です。">
 
 <meta name="robots"
 content="index,follow">
 
 <title>
-コラム｜由比ヶ浜ラボ
+コラム｜由比ヶ浜ランニングラボ
 </title>
 
 <style>
@@ -23,10 +23,14 @@ content="index,follow">
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
-    background:#f4f7fc;
-    color:#333;
+    background:#f3efe7;
+    color:#28312d;
 
     font-family:
     -apple-system,
@@ -38,87 +42,238 @@ body{
 
 .page{
     width:100%;
-    max-width:700px;
+    max-width:720px;
     min-height:100vh;
     margin:auto;
-    padding:45px 24px;
-    background:#f7f9fc;
+    background:#fbf8f1;
+    box-shadow:0 0 30px rgba(68,57,40,.08);
 }
 
+
+/* ヘッダー */
+
 header{
+    padding:48px 24px 34px;
     text-align:center;
-    padding-bottom:45px;
-    border-bottom:1px solid #dfe3ea;
+    border-bottom:1px solid #d9d1c3;
+}
+
+.site-label{
+    margin:0 0 12px;
+    color:#758477;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:.78rem;
+    font-weight:bold;
+    letter-spacing:3px;
 }
 
 .site-name{
     margin:0;
-    color:#0b63c9;
-    font-size:2.2rem;
+    color:#253b32;
+    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
+    font-size:2rem;
+    line-height:1.35;
+    letter-spacing:.03em;
 }
 
 .site-name-en{
     margin:10px 0 0;
-    color:#666;
-    font-size:1.1rem;
-    letter-spacing:1px;
+    color:#8b897f;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:.88rem;
+    letter-spacing:2px;
 }
 
-h2{
-    margin:55px 0 15px;
+
+/* メイン */
+
+main{
+    padding:42px 22px 55px;
+}
+
+.page-title-area{
     text-align:center;
+}
+
+.page-title{
+    margin:0;
+    color:#26382f;
+    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
     font-size:2rem;
+    font-weight:600;
+}
+
+.title-line{
+    width:42px;
+    height:2px;
+    margin:18px auto;
+    background:#9a7251;
 }
 
 .intro{
-    margin:0 auto 35px;
-    text-align:center;
-    color:#666;
+    margin:0 auto 42px;
+    color:#6e716b;
+    font-size:.95rem;
     line-height:1.9;
 }
 
+
+/* 注目記事 */
+
+.featured-card{
+    display:block;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:34px;
+    padding:32px 26px 28px;
+    background:#304a3e;
+    border-radius:4px;
+    color:#fff;
+    text-decoration:none;
+    box-shadow:0 12px 25px rgba(43,59,50,.16);
+}
+
+.featured-label{
+    display:inline-block;
+    margin-bottom:24px;
+    padding:6px 10px;
+    border:1px solid rgba(255,255,255,.55);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:.7rem;
+    letter-spacing:2px;
+}
+
+.featured-card h2{
+    margin:0 0 15px;
+    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
+    font-size:1.65rem;
+    line-height:1.5;
+}
+
+.featured-card p{
+    margin:0;
+    color:#e2e9e4;
+    font-size:.93rem;
+    line-height:1.9;
+}
+
+.read-more{
+    display:block;
+    margin-top:24px;
+    font-size:.84rem;
+    font-weight:bold;
+    letter-spacing:.06em;
+}
+
+
+/* 一覧見出し */
+
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:42px 0 22px;
+    color:#304238;
+    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
+    font-size:1.25rem;
+}
+
+.section-title::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#d6cdbc;
+}
+
+
+/* 記事カード */
+
 .column-list{
     display:grid;
-    gap:22px;
+    gap:18px;
 }
 
 .column-card{
     display:block;
-    padding:26px 22px;
-    background:#fff;
-    border-radius:20px;
+    padding:24px 22px;
+    background:#fffdf9;
+    border:1px solid #e4dccf;
+    border-left:4px solid #9a7251;
+    border-radius:3px;
+    color:#28312d;
     text-decoration:none;
-    color:#333;
-    box-shadow:0 5px 18px rgba(30,60,110,.10);
+    transition:.2s;
+}
+
+.column-card:active{
+    transform:scale(.99);
+}
+
+.column-meta{
+    margin-bottom:8px;
+    color:#929085;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:.72rem;
+    letter-spacing:.08em;
 }
 
 .column-card h3{
     margin:0 0 10px;
-    color:#0b63c9;
-    font-size:1.35rem;
+    color:#2d4036;
+    font-family:Georgia,"Times New Roman","Yu Mincho",serif;
+    font-size:1.25rem;
+    line-height:1.5;
 }
 
 .column-card p{
     margin:0;
-    color:#666;
+    color:#6c706a;
+    font-size:.9rem;
     line-height:1.8;
 }
 
+
+/* トップへ戻る */
+
 .back-link{
     display:block;
-    margin-top:50px;
-    text-align:center;
-    color:#0b63c9;
+    width:fit-content;
+    margin:48px auto 0;
+    padding-bottom:5px;
+    border-bottom:1px solid #7b705f;
+    color:#5d5a50;
+    font-size:.9rem;
     text-decoration:none;
-    font-weight:bold;
 }
 
+
+/* フッター */
+
 footer{
-    margin-top:55px;
-    padding-top:35px;
-    border-top:1px solid #dfe3ea;
+    padding:30px 20px;
+    background:#293a32;
+    color:#cfd7d1;
     text-align:center;
-    color:#888;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:.78rem;
+    letter-spacing:.08em;
+}
+
+@media(min-width:600px){
+
+    header{
+        padding-top:60px;
+    }
+
+    main{
+        padding-left:45px;
+        padding-right:45px;
+    }
+
+    .featured-card{
+        padding:40px 36px 34px;
+    }
+
 }
 
 </style>
@@ -131,56 +286,102 @@ footer{
 
 <header>
 
+    <p class="site-label">
+        RUNNING JOURNAL
+    </p>
+
     <h1 class="site-name">
-        由比ヶ浜ラボ
+        由比ヶ浜ランニングラボ
     </h1>
 
     <p class="site-name-en">
-        Yuigahama Lab
+        Yuigahama Running Lab
     </p>
 
 </header>
 
+
 <main>
 
-    <h2>
-        コラム
+    <div class="page-title-area">
+
+        <h2 class="page-title">
+            コラム
+        </h2>
+
+        <div class="title-line"></div>
+
+        <p class="intro">
+            ランニングや陸上競技に役立つ知識を、<br>
+            わかりやすく丁寧に紹介します。
+        </p>
+
+    </div>
+
+
+    <a href="./vdot/" class="featured-card">
+
+        <span class="featured-label">
+            FEATURED
+        </span>
+
+        <h2>
+            VDOTとは？<br>
+            記録から走力を読み解く指標
+        </h2>
+
+        <p>
+            レース記録から走力を数値化し、
+            練習ペースの目安にも使えるVDOTについて解説します。
+        </p>
+
+        <span class="read-more">
+            記事を読む →
+        </span>
+
+    </a>
+
+
+    <h2 class="section-title">
+        新着コラム
     </h2>
 
-    <p class="intro">
-        ランニングや陸上競技に役立つ知識を、<br>
-        わかりやすく紹介しています。
-    </p>
 
     <div class="column-list">
 
         <a href="./vdot/" class="column-card">
+
+            <div class="column-meta">
+                2026.07.25　RUNNING SCIENCE
+            </div>
 
             <h3>
                 VDOTとは？
             </h3>
 
             <p>
-                ランニングの記録を評価する指標「VDOT」の意味や、
-                活用方法をわかりやすく解説します。
+                VDOTの意味や計算の考え方、
+                ランニングへの活用方法を紹介します。
             </p>
 
         </a>
 
     </div>
 
+
     <a
     href="https://fvcmpbzj5v-arch.github.io/"
     class="back-link">
 
-        ← 由比ヶ浜ラボへ戻る
+        ← 由比ヶ浜ランニングラボへ戻る
 
     </a>
 
 </main>
 
+
 <footer>
-    © 2026 Yuigahama Lab
+    © 2026 Yuigahama Running Lab
 </footer>
 
 </div>
