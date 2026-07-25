@@ -8,36 +8,487 @@
 content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="VDOTとは何か、VO₂maxとの違いや活用方法をわかりやすく解説します。">
+content="VDOTとは何か、VO₂maxとの違いや活用方法を、ランナー向けにわかりやすく解説します。">
 
 <meta name="robots"
 content="index,follow">
 
 <title>
-VDOTとは？｜由比ヶ浜ラボ
+VDOTとは？VO₂maxとの違いや活用方法を解説｜由比ヶ浜ラボ
 </title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#f4f7fc;
+    color:#17213a;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Yu Gothic",
+    sans-serif;
+
+    line-height:1.9;
+}
+
+.page{
+    width:100%;
+    max-width:760px;
+    min-height:100vh;
+    margin:auto;
+    background:#ffffff;
+    box-shadow:0 0 28px rgba(30,60,110,.08);
+}
+
+.site-header{
+    padding:18px 22px;
+    border-bottom:1px solid #e7edf7;
+    background:#ffffff;
+}
+
+.site-name{
+    margin:0;
+    font-size:1rem;
+    font-weight:700;
+}
+
+.site-name a{
+    color:#2563eb;
+    text-decoration:none;
+}
+
+.article-header{
+    padding:36px 22px 26px;
+    background:
+    linear-gradient(
+        180deg,
+        #eef5ff 0%,
+        #ffffff 100%
+    );
+    border-bottom:1px solid #e7edf7;
+}
+
+.category{
+    display:inline-block;
+    margin-bottom:12px;
+    padding:5px 11px;
+    border-radius:999px;
+    background:#dbeafe;
+    color:#1d4ed8;
+    font-size:.78rem;
+    font-weight:700;
+}
+
+h1{
+    margin:0;
+    color:#17213a;
+    font-size:clamp(1.8rem,6vw,2.6rem);
+    line-height:1.4;
+    letter-spacing:.01em;
+}
+
+.lead{
+    margin:18px 0 0;
+    color:#52617a;
+    font-size:1rem;
+}
+
+.article-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 16px;
+    margin-top:18px;
+    color:#75839b;
+    font-size:.82rem;
+}
+
+.article-body{
+    padding:30px 22px 10px;
+}
+
+.article-body h2{
+    margin:44px 0 18px;
+    padding-left:13px;
+    border-left:5px solid #2563eb;
+    color:#17213a;
+    font-size:1.45rem;
+    line-height:1.5;
+}
+
+.article-body h3{
+    margin:32px 0 14px;
+    color:#1e3a5f;
+    font-size:1.15rem;
+}
+
+.article-body p{
+    margin:0 0 22px;
+}
+
+.article-body ul{
+    margin:0 0 24px;
+    padding-left:1.4rem;
+}
+
+.article-body li{
+    margin-bottom:8px;
+}
+
+.highlight-box{
+    margin:28px 0;
+    padding:20px;
+    border:1px solid #bfdbfe;
+    border-radius:14px;
+    background:#eff6ff;
+}
+
+.highlight-box strong{
+    color:#1d4ed8;
+}
+
+.comparison{
+    margin:28px 0;
+    overflow-x:auto;
+}
+
+.comparison table{
+    width:100%;
+    min-width:520px;
+    border-collapse:collapse;
+    font-size:.92rem;
+}
+
+.comparison th,
+.comparison td{
+    padding:14px 12px;
+    border:1px solid #dbe4f0;
+    text-align:left;
+    vertical-align:top;
+}
+
+.comparison th{
+    background:#eff6ff;
+    color:#1e3a5f;
+}
+
+.related-section{
+    margin:42px 22px 0;
+    padding:22px;
+    border-radius:16px;
+    background:#f7f9fc;
+    border:1px solid #e2e8f0;
+}
+
+.related-section h2{
+    margin:0 0 14px;
+    font-size:1.2rem;
+}
+
+.related-links{
+    display:grid;
+    gap:10px;
+}
+
+.related-links a{
+    display:block;
+    padding:13px 15px;
+    border-radius:10px;
+    background:#ffffff;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:700;
+    border:1px solid #dbe4f0;
+}
+
+.related-links a:hover{
+    background:#eff6ff;
+}
+
+.back-area{
+    padding:28px 22px 38px;
+}
+
+.back-button{
+    display:block;
+    width:100%;
+    padding:14px 16px;
+    border-radius:12px;
+    background:#2563eb;
+    color:#ffffff;
+    text-align:center;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.site-footer{
+    padding:22px;
+    border-top:1px solid #e7edf7;
+    color:#7b8799;
+    text-align:center;
+    font-size:.8rem;
+    background:#fbfcfe;
+}
+
+@media(max-width:520px){
+
+    .article-header{
+        padding-top:30px;
+    }
+
+    .article-body h2{
+        margin-top:38px;
+        font-size:1.3rem;
+    }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<h1>VDOTとは？</h1>
+<div class="page">
 
-<p>
-第1回コラムです。
-</p>
+<header class="site-header">
 
-<p>
-この記事では、VDOTとは何か、
-VO₂maxとの違い、
-活用方法について解説します。
-</p>
-
-<p>
-<a href="../">
-← コラム一覧へ戻る
+<p class="site-name">
+<a href="https://fvcmpbzj5v-arch.github.io/">
+由比ヶ浜ラボ
 </a>
 </p>
+
+</header>
+
+<main>
+
+<header class="article-header">
+
+<span class="category">
+ランニング基礎知識
+</span>
+
+<h1>
+VDOTとは？VO₂maxとの違いや活用方法を解説
+</h1>
+
+<p class="lead">
+VDOTは、レース記録からランナーの走力を数値化する指標です。
+意味やVO₂maxとの違い、練習への活用方法をわかりやすく紹介します。
+</p>
+
+<div class="article-meta">
+
+<span>公開日：2026年7月25日</span>
+
+<span>由比ヶ浜ラボ コラム第1回</span>
+
+</div>
+
+</header>
+
+<article class="article-body">
+
+<h2>VDOTとは？</h2>
+
+<p>
+VDOTは、ランナーの走力を一つの数値で表すための指標です。
+レースの距離とタイムをもとに算出され、現在の走力や、
+他の距離で狙える記録の目安を確認できます。
+</p>
+
+<div class="highlight-box">
+
+<strong>VDOTの特徴</strong>
+
+<p>
+単なるスピードだけではなく、実際のレースで発揮された
+持久力や走行効率を含めて評価できる点にあります。
+</p>
+
+</div>
+
+<h2>VDOTとVO₂maxの違い</h2>
+
+<p>
+VDOTとVO₂maxは似た言葉ですが、同じものではありません。
+</p>
+
+<div class="comparison">
+
+<table>
+
+<thead>
+
+<tr>
+<th>項目</th>
+<th>VDOT</th>
+<th>VO₂max</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>意味</td>
+<td>レース記録から算出する実戦的な走力指標</td>
+<td>体が取り込める酸素量を示す生理学的指標</td>
+</tr>
+
+<tr>
+<td>確認方法</td>
+<td>距離とタイムから計算</td>
+<td>専門機器を使用した運動負荷試験など</td>
+</tr>
+
+<tr>
+<td>反映される要素</td>
+<td>走行効率、持久力、レースパフォーマンス</td>
+<td>酸素を取り込み利用する能力</td>
+</tr>
+
+<tr>
+<td>主な用途</td>
+<td>予想タイムや練習ペースの設定</td>
+<td>身体能力や持久力の評価</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<p>
+VO₂maxは体の酸素利用能力を表します。
+一方のVDOTは、実際にどのくらい速く走れたかという結果から、
+ランナーとしての総合的な走力を評価します。
+</p>
+
+<p>
+そのため、同じVO₂maxを持つランナーでも、
+走り方の効率やペース配分が異なれば、
+VDOTには差が出ることがあります。
+</p>
+
+<h2>VDOTで何がわかる？</h2>
+
+<ul>
+<li>現在の走力レベル</li>
+<li>他の距離の予想タイム</li>
+<li>適切なトレーニングペース</li>
+<li>目標タイムまでの差</li>
+<li>過去の自分からどれだけ成長したか</li>
+</ul>
+
+<p>
+例えば、5kmの記録から10kmやハーフマラソンの
+予想タイムを考える際にも活用できます。
+</p>
+
+<h2>VDOTを使うときの注意点</h2>
+
+<p>
+VDOTは便利な指標ですが、
+一つの記録だけですべての能力がわかるわけではありません。
+</p>
+
+<p>
+短い距離が得意なスピード型のランナーと、
+長い距離が得意な持久力型のランナーでは、
+同じVDOTでも得意な距離が異なることがあります。
+</p>
+
+<p>
+また、気温、風、コースの高低差、疲労、
+レース当日の体調によっても記録は変わります。
+VDOTは絶対的な答えではなく、
+目標設定や練習を考えるための目安として使うことが大切です。
+</p>
+
+<h2>由比ヶ浜ラボでの活用</h2>
+
+<p>
+由比ヶ浜ラボの予測ツールでは、
+VDOTの考え方を参考にしながら、
+入力された記録から走力や予想タイムを算出しています。
+</p>
+
+<p>
+さらに、複数の記録や距離の違いを組み合わせることで、
+ランナーの特徴をより細かく捉える予測を目指しています。
+</p>
+
+<h2>まとめ</h2>
+
+<p>
+VDOTは、実際のレース記録からランナーの走力を
+数値化できる便利な指標です。
+</p>
+
+<p>
+VO₂maxが身体の酸素利用能力を示すのに対し、
+VDOTはレースで発揮された総合的な走力を表します。
+</p>
+
+<p>
+現在の走力確認や目標タイムの設定、
+練習ペースを考える際の目安として活用してみましょう。
+</p>
+
+</article>
+
+<section class="related-section">
+
+<h2>関連ページ</h2>
+
+<div class="related-links">
+
+<a href="https://fvcmpbzj5v-arch.github.io/half-marathon-predictor/">
+ハーフマラソン予測
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/3km-predictor/">
+3000m予測
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/">
+由比ヶ浜ラボ トップページ
+</a>
+
+</div>
+
+</section>
+
+<div class="back-area">
+
+<a class="back-button" href="../">
+コラム一覧へ戻る
+</a>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+
+© 2026 由比ヶ浜ラボ
+
+</footer>
+
+</div>
 
 </body>
 </html>
