@@ -29,8 +29,8 @@ html{
 
 body{
     margin:0;
-    background:#f5f5f7;
-    color:#1d1d1f;
+    background:#eef3f7;
+    color:#172033;
 
     font-family:
     -apple-system,
@@ -46,28 +46,62 @@ body{
     min-height:100vh;
     margin:auto;
     background:#ffffff;
+    box-shadow:0 0 28px rgba(20,40,70,.08);
 }
 
 
 /* ヘッダー */
 
 header{
-    padding:56px 24px 36px;
-    text-align:center;
+    position:relative;
+    overflow:hidden;
+    padding:48px 24px 38px;
+    background:
+        linear-gradient(
+            135deg,
+            #0e2a47 0%,
+            #153b60 60%,
+            #1e557d 100%
+        );
+    color:#ffffff;
+}
+
+header::after{
+    content:"";
+    position:absolute;
+    right:-45px;
+    bottom:-65px;
+    width:180px;
+    height:180px;
+    border:28px solid rgba(255,255,255,.08);
+    border-radius:50%;
+}
+
+.header-label{
+    position:relative;
+    z-index:1;
+    margin:0 0 10px;
+    color:#76dfc0;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.2em;
 }
 
 .site-name{
+    position:relative;
+    z-index:1;
     margin:0;
-    color:#111111;
     font-size:2rem;
-    font-weight:700;
+    line-height:1.35;
     letter-spacing:-.03em;
 }
 
 .site-name-en{
-    margin:10px 0 0;
-    color:#86868b;
-    font-size:.86rem;
+    position:relative;
+    z-index:1;
+    margin:9px 0 0;
+    color:#bdd0df;
+    font-size:.84rem;
     letter-spacing:.08em;
 }
 
@@ -75,36 +109,37 @@ header{
 /* メイン */
 
 main{
-    padding:12px 20px 64px;
+    padding:34px 20px 60px;
 }
+
+
+/* ページ紹介 */
 
 .hero{
-    padding:38px 8px 48px;
-    text-align:center;
+    margin-bottom:32px;
 }
 
-.hero-label{
-    margin:0 0 12px;
-    color:#2563eb;
+.hero-kicker{
+    margin:0 0 8px;
+    color:#148a72;
     font-size:.78rem;
-    font-weight:700;
-    letter-spacing:.16em;
+    font-weight:800;
+    letter-spacing:.13em;
 }
 
 .hero-title{
     margin:0;
-    color:#1d1d1f;
-    font-size:2.35rem;
-    line-height:1.2;
+    color:#16243a;
+    font-size:2rem;
+    line-height:1.35;
     letter-spacing:-.04em;
 }
 
 .hero-text{
-    max-width:520px;
-    margin:20px auto 0;
-    color:#6e6e73;
-    font-size:1rem;
-    line-height:1.9;
+    margin:15px 0 0;
+    color:#647084;
+    font-size:.95rem;
+    line-height:1.85;
 }
 
 
@@ -112,118 +147,168 @@ main{
 
 .featured-card{
     display:block;
-    margin-bottom:44px;
-    padding:34px 28px;
-    background:#f5f5f7;
-    border-radius:28px;
-    color:#1d1d1f;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:38px;
+    padding:30px 24px;
+    background:
+        linear-gradient(
+            135deg,
+            #e9f8f3 0%,
+            #f2fbf8 100%
+        );
+    border:1px solid #ccebe1;
+    border-radius:20px;
+    color:#172033;
     text-decoration:none;
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
 }
 
-.featured-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 16px 36px rgba(0,0,0,.08);
+.featured-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:7px;
+    height:100%;
+    background:#18a080;
 }
 
 .featured-label{
     display:inline-block;
-    margin-bottom:18px;
-    color:#2563eb;
-    font-size:.74rem;
-    font-weight:700;
-    letter-spacing:.12em;
+    margin-bottom:15px;
+    padding:5px 9px;
+    background:#153b60;
+    border-radius:999px;
+    color:#ffffff;
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:.1em;
 }
 
 .featured-card h2{
     margin:0;
-    font-size:1.75rem;
-    line-height:1.45;
+    color:#18324a;
+    font-size:1.55rem;
+    line-height:1.5;
     letter-spacing:-.02em;
 }
 
 .featured-card p{
-    margin:16px 0 0;
-    color:#6e6e73;
-    font-size:.96rem;
-    line-height:1.9;
-}
-
-.read-more{
-    display:block;
-    margin-top:22px;
-    color:#2563eb;
-    font-size:.9rem;
-    font-weight:600;
-}
-
-
-/* 一覧タイトル */
-
-.section-title{
-    margin:0 0 18px;
-    color:#1d1d1f;
-    font-size:1.45rem;
-    letter-spacing:-.02em;
-}
-
-
-/* 記事カード */
-
-.column-list{
-    display:grid;
-    gap:18px;
-}
-
-.column-card{
-    display:block;
-    padding:26px 24px;
-    background:#ffffff;
-    border:1px solid #e8e8ed;
-    border-radius:22px;
-    color:#1d1d1f;
-    text-decoration:none;
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        border-color .2s ease;
-}
-
-.column-card:hover{
-    transform:translateY(-2px);
-    border-color:#d2d2d7;
-    box-shadow:0 10px 28px rgba(0,0,0,.06);
-}
-
-.column-meta{
-    margin-bottom:10px;
-    color:#86868b;
-    font-size:.74rem;
-    letter-spacing:.05em;
-}
-
-.column-card h3{
-    margin:0;
-    font-size:1.3rem;
-    line-height:1.5;
-    letter-spacing:-.01em;
-}
-
-.column-card p{
-    margin:12px 0 0;
-    color:#6e6e73;
+    margin:14px 0 0;
+    color:#607267;
     font-size:.92rem;
     line-height:1.85;
 }
 
-.card-link{
+.read-more{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:22px;
+    color:#147761;
+    font-size:.88rem;
+    font-weight:800;
+}
+
+.read-more::after{
+    content:"→";
+    display:grid;
+    place-items:center;
+    width:34px;
+    height:34px;
+    background:#ffffff;
+    border-radius:50%;
+    box-shadow:0 5px 14px rgba(20,70,55,.08);
+}
+
+
+/* セクションタイトル */
+
+.section-heading{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:18px;
+}
+
+.section-title{
+    margin:0;
+    color:#172033;
+    font-size:1.45rem;
+}
+
+.section-subtitle{
+    margin:0;
+    color:#8a94a3;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.08em;
+}
+
+
+/* 記事一覧 */
+
+.column-list{
+    display:grid;
+    gap:16px;
+}
+
+.column-card{
     display:block;
+    padding:22px;
+    background:#ffffff;
+    border:1px solid #dfe6ec;
+    border-radius:18px;
+    color:#172033;
+    text-decoration:none;
+    box-shadow:0 6px 18px rgba(30,55,80,.05);
+}
+
+.column-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.category{
+    padding:5px 9px;
+    background:#edf4fa;
+    border-radius:999px;
+    color:#315b7a;
+    font-size:.68rem;
+    font-weight:800;
+}
+
+.date{
+    color:#9aa3ad;
+    font-size:.7rem;
+}
+
+.column-card h3{
+    margin:0;
+    color:#1b2d43;
+    font-size:1.24rem;
+    line-height:1.5;
+}
+
+.column-card p{
+    margin:10px 0 0;
+    color:#6b7684;
+    font-size:.9rem;
+    line-height:1.8;
+}
+
+.card-footer{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
     margin-top:16px;
-    color:#2563eb;
-    font-size:.86rem;
-    font-weight:600;
+    color:#16856e;
+    font-size:.83rem;
+    font-weight:800;
 }
 
 
@@ -231,11 +316,14 @@ main{
 
 .back-link{
     display:block;
-    margin-top:52px;
+    margin-top:48px;
+    padding:16px 18px;
+    background:#f3f6f8;
+    border-radius:14px;
+    color:#284865;
     text-align:center;
-    color:#2563eb;
     font-size:.9rem;
-    font-weight:600;
+    font-weight:700;
     text-decoration:none;
 }
 
@@ -243,37 +331,37 @@ main{
 /* フッター */
 
 footer{
-    padding:30px 20px;
-    border-top:1px solid #eeeeee;
-    color:#86868b;
+    padding:28px 20px;
+    background:#10283f;
+    color:#afc0ce;
     text-align:center;
-    font-size:.78rem;
+    font-size:.76rem;
+    letter-spacing:.06em;
 }
 
 
-/* PC表示 */
+/* PC */
 
 @media(min-width:600px){
 
     header{
-        padding-top:68px;
+        padding:60px 42px 46px;
     }
 
     main{
-        padding-left:42px;
-        padding-right:42px;
+        padding:44px 42px 70px;
     }
 
-    .hero{
-        padding-top:50px;
+    .site-name{
+        font-size:2.35rem;
     }
 
     .hero-title{
-        font-size:3rem;
+        font-size:2.45rem;
     }
 
     .featured-card{
-        padding:42px 38px;
+        padding:36px 32px;
     }
 
 }
@@ -287,6 +375,10 @@ footer{
 <div class="page">
 
 <header>
+
+    <p class="header-label">
+        RUNNING MAGAZINE
+    </p>
 
     <h1 class="site-name">
         由比ヶ浜ランニングラボ
@@ -303,18 +395,18 @@ footer{
 
     <section class="hero">
 
-        <p class="hero-label">
+        <p class="hero-kicker">
             COLUMN
         </p>
 
         <h2 class="hero-title">
-            走ることを、<br>
-            もう少し深く。
+            走りを知れば、<br>
+            もっと速く、もっと楽しく。
         </h2>
 
         <p class="hero-text">
-            ランニングや陸上競技に役立つ知識を、
-            シンプルに、わかりやすく紹介します。
+            トレーニング理論や記録分析など、
+            ランニングに役立つ情報をわかりやすく紹介します。
         </p>
 
     </section>
@@ -323,7 +415,7 @@ footer{
     <a href="./vdot/" class="featured-card">
 
         <span class="featured-label">
-            FEATURED COLUMN
+            PICK UP
         </span>
 
         <h2>
@@ -332,28 +424,44 @@ footer{
         </h2>
 
         <p>
-            レース記録から走力を数値化し、
-            練習ペースの目安にも使えるVDOTについて解説します。
+            レースタイムから現在の走力を数値化し、
+            練習ペースの目安にも活用できるVDOTを解説します。
         </p>
 
         <span class="read-more">
-            記事を読む →
+            注目記事を読む
         </span>
 
     </a>
 
 
-    <h2 class="section-title">
-        新着コラム
-    </h2>
+    <div class="section-heading">
+
+        <h2 class="section-title">
+            新着コラム
+        </h2>
+
+        <p class="section-subtitle">
+            NEW ARTICLES
+        </p>
+
+    </div>
 
 
     <div class="column-list">
 
         <a href="./vdot/" class="column-card">
 
-            <div class="column-meta">
-                2026.07.25
+            <div class="column-top">
+
+                <span class="category">
+                    RUNNING SCIENCE
+                </span>
+
+                <span class="date">
+                    2026.07.25
+                </span>
+
             </div>
 
             <h3>
@@ -362,12 +470,12 @@ footer{
 
             <p>
                 VDOTの意味や計算の考え方、
-                ランニングへの活用方法を紹介します。
+                練習やレースでの活用方法を紹介します。
             </p>
 
-            <span class="card-link">
+            <div class="card-footer">
                 詳しく見る →
-            </span>
+            </div>
 
         </a>
 
