@@ -29,8 +29,8 @@ html{
 
 body{
     margin:0;
-    background:#f4f7fc;
-    color:#17213a;
+    background:#f6f9f8;
+    color:#24312f;
 
     font-family:
     -apple-system,
@@ -48,12 +48,14 @@ body{
     min-height:100vh;
     margin:auto;
     background:#ffffff;
-    box-shadow:0 0 28px rgba(30,60,110,.08);
+    box-shadow:0 0 28px rgba(35,90,75,.08);
 }
+
+/* 上部 */
 
 .site-header{
     padding:18px 22px;
-    border-bottom:1px solid #e7edf7;
+    border-bottom:1px solid #e2ebe8;
     background:#ffffff;
 }
 
@@ -64,35 +66,39 @@ body{
 }
 
 .site-name a{
-    color:#2563eb;
+    color:#2f8673;
     text-decoration:none;
 }
 
+/* 記事上部 */
+
 .article-header{
-    padding:36px 22px 26px;
+    padding:38px 22px 28px;
+
     background:
     linear-gradient(
         180deg,
-        #eef5ff 0%,
+        #edf7f4 0%,
         #ffffff 100%
     );
-    border-bottom:1px solid #e7edf7;
+
+    border-bottom:1px solid #e2ebe8;
 }
 
 .category{
     display:inline-block;
-    margin-bottom:12px;
-    padding:5px 11px;
+    margin-bottom:14px;
+    padding:5px 12px;
     border-radius:999px;
-    background:#dbeafe;
-    color:#1d4ed8;
+    background:#dcefe9;
+    color:#287562;
     font-size:.78rem;
     font-weight:700;
 }
 
 h1{
     margin:0;
-    color:#17213a;
+    color:#1f2a28;
     font-size:clamp(1.8rem,6vw,2.6rem);
     line-height:1.4;
     letter-spacing:.01em;
@@ -100,7 +106,7 @@ h1{
 
 .lead{
     margin:18px 0 0;
-    color:#52617a;
+    color:#596965;
     font-size:1rem;
 }
 
@@ -108,10 +114,12 @@ h1{
     display:flex;
     flex-wrap:wrap;
     gap:8px 16px;
-    margin-top:18px;
-    color:#75839b;
+    margin-top:20px;
+    color:#7a8985;
     font-size:.82rem;
 }
+
+/* 本文 */
 
 .article-body{
     padding:30px 22px 10px;
@@ -120,15 +128,15 @@ h1{
 .article-body h2{
     margin:44px 0 18px;
     padding-left:13px;
-    border-left:5px solid #2563eb;
-    color:#17213a;
+    border-left:5px solid #2f8673;
+    color:#24312f;
     font-size:1.45rem;
     line-height:1.5;
 }
 
 .article-body h3{
     margin:32px 0 14px;
-    color:#1e3a5f;
+    color:#315f55;
     font-size:1.15rem;
 }
 
@@ -145,21 +153,30 @@ h1{
     margin-bottom:8px;
 }
 
+/* 強調ボックス */
+
 .highlight-box{
     margin:28px 0;
     padding:20px;
-    border:1px solid #bfdbfe;
+    border:1px solid #bcded4;
     border-radius:14px;
-    background:#eff6ff;
+    background:#edf8f4;
 }
 
 .highlight-box strong{
-    color:#1d4ed8;
+    color:#287562;
 }
+
+.highlight-box p{
+    margin:10px 0 0;
+}
+
+/* 比較表 */
 
 .comparison{
     margin:28px 0;
     overflow-x:auto;
+    border-radius:12px;
 }
 
 .comparison table{
@@ -172,26 +189,40 @@ h1{
 .comparison th,
 .comparison td{
     padding:14px 12px;
-    border:1px solid #dbe4f0;
+    border:1px solid #d7e5e1;
     text-align:left;
     vertical-align:top;
 }
 
 .comparison th{
-    background:#eff6ff;
-    color:#1e3a5f;
+    background:#eaf5f1;
+    color:#315f55;
 }
+
+/* 補足 */
+
+.note-box{
+    margin:28px 0;
+    padding:18px 20px;
+    border-left:4px solid #70ad9d;
+    border-radius:0 12px 12px 0;
+    background:#f5faf8;
+    color:#465752;
+}
+
+/* 関連ページ */
 
 .related-section{
     margin:42px 22px 0;
     padding:22px;
     border-radius:16px;
-    background:#f7f9fc;
-    border:1px solid #e2e8f0;
+    background:#f4f8f7;
+    border:1px solid #dce8e4;
 }
 
 .related-section h2{
     margin:0 0 14px;
+    color:#24312f;
     font-size:1.2rem;
 }
 
@@ -202,18 +233,31 @@ h1{
 
 .related-links a{
     display:block;
-    padding:13px 15px;
-    border-radius:10px;
+    position:relative;
+    padding:14px 42px 14px 15px;
+    border-radius:11px;
     background:#ffffff;
-    color:#2563eb;
+    color:#2f8673;
     text-decoration:none;
     font-weight:700;
-    border:1px solid #dbe4f0;
+    border:1px solid #d7e5e1;
+}
+
+.related-links a::after{
+    content:"›";
+    position:absolute;
+    top:50%;
+    right:17px;
+    transform:translateY(-53%);
+    font-size:1.7rem;
+    font-weight:400;
 }
 
 .related-links a:hover{
-    background:#eff6ff;
+    background:#edf8f4;
 }
+
+/* 戻るボタン */
 
 .back-area{
     padding:28px 22px 38px;
@@ -222,33 +266,55 @@ h1{
 .back-button{
     display:block;
     width:100%;
-    padding:14px 16px;
-    border-radius:12px;
-    background:#2563eb;
+    padding:15px 16px;
+    border-radius:14px;
+    background:#2f8673;
     color:#ffffff;
     text-align:center;
     text-decoration:none;
     font-weight:700;
+    box-shadow:0 8px 18px rgba(47,134,115,.18);
 }
 
+.back-button:hover{
+    background:#287562;
+}
+
+/* フッター */
+
 .site-footer{
-    padding:22px;
-    border-top:1px solid #e7edf7;
-    color:#7b8799;
+    padding:24px 22px;
+    border-top:1px solid #e2ebe8;
+    color:#7b8986;
     text-align:center;
-    font-size:.8rem;
-    background:#fbfcfe;
+    font-size:.82rem;
+    background:#fbfdfc;
 }
 
 @media(max-width:520px){
 
     .article-header{
-        padding-top:30px;
+        padding-top:31px;
     }
 
     .article-body h2{
         margin-top:38px;
         font-size:1.3rem;
+    }
+
+    .article-body{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .related-section{
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .back-area{
+        padding-left:20px;
+        padding-right:20px;
     }
 
 }
@@ -264,8 +330,8 @@ h1{
 <header class="site-header">
 
 <p class="site-name">
-<a href="https://fvcmpbzj5v-arch.github.io/">
-由比ヶ浜ラボ
+<a href="../">
+由比ヶ浜ラボ コラム
 </a>
 </p>
 
@@ -383,6 +449,12 @@ VO₂maxは体の酸素利用能力を表します。
 VDOTには差が出ることがあります。
 </p>
 
+<div class="note-box">
+VDOTはVO₂maxそのものを測定した数値ではなく、
+レース結果から推定される実用的な走力指数として考えると
+理解しやすくなります。
+</div>
+
 <h2>VDOTで何がわかる？</h2>
 
 <ul>
@@ -475,7 +547,7 @@ VDOTはレースで発揮された総合的な走力を表します。
 <div class="back-area">
 
 <a class="back-button" href="../">
-コラム一覧へ戻る
+← コラム一覧へ戻る
 </a>
 
 </div>
@@ -484,7 +556,7 @@ VDOTはレースで発揮された総合的な走力を表します。
 
 <footer class="site-footer">
 
-© 2026 由比ヶ浜ラボ
+© 2026 Yuigahama Lab
 
 </footer>
 
