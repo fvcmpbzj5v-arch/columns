@@ -150,6 +150,39 @@ main{
         box-shadow .18s ease;
 }
 
+/* 準備中の記事 */
+
+.column-card.preparing{
+    background:#eef1f0;
+    color:#8a918e;
+    box-shadow:none;
+    cursor:default;
+}
+
+.column-card.preparing:hover{
+    transform:none;
+    box-shadow:none;
+}
+
+.column-card.preparing h2{
+    color:#767d7a;
+}
+
+.column-card.preparing p{
+    color:#909693;
+}
+
+.status-label{
+    display:inline-block;
+    margin-bottom:11px;
+    padding:4px 10px;
+    border-radius:999px;
+    background:#dfe3e1;
+    color:#777e7b;
+    font-size:.75rem;
+    font-weight:700;
+}
+
 .column-card:hover{
     transform:translateY(-2px);
     box-shadow:
@@ -344,61 +377,79 @@ footer{
     <section class="column-list">
 
 
-        <a
-        href="./vdot/"
-        class="column-card">
+    <a
+    href="./vdot/"
+    class="column-card">
 
-            <h2>
-                VDOTとは？
-            </h2>
+        <h2>
+            VDOTとは？
+        </h2>
 
-            <p>
-                レース記録から走力を数値化し、<br>
-                練習ペースの目安にも使えるVDOTについて解説します。
-            </p>
+        <p>
+            レース記録から走力を数値化し、<br>
+            練習ペースの目安にも使えるVDOTについて解説します。
+        </p>
 
-            <span class="arrow"></span>
+        <span class="arrow"></span>
 
-        </a>
-
-
-        <a
-        href="./vo2max/"
-        class="column-card">
-
-            <h2>
-                VO₂maxとは？
-            </h2>
-
-            <p>
-                ランナーの持久力を示す指標VO₂maxについて、<br>
-                意味や測定方法、向上のポイントを紹介します。
-            </p>
-
-            <span class="arrow"></span>
-
-        </a>
+    </a>
 
 
-        <a
-        href="./running-economy/"
-        class="column-card">
+    <a
+    href="./lt/"
+    class="column-card">
 
-            <h2>
-                ランニングエコノミーとは？
-            </h2>
+        <h2>
+            LTペースとは？
+        </h2>
 
-            <p>
-                同じペースでも消費するエネルギーが少ないほど有利。<br>
-                ランニングエコノミーの基礎と改善方法を解説します。
-            </p>
+        <p>
+            速いペースを長く維持するために重要なLTペース。<br>
+            Tペースの意味や練習方法、適切な強度を解説します。
+        </p>
 
-            <span class="arrow"></span>
+        <span class="arrow"></span>
 
-        </a>
+    </a>
 
 
-    </section>
+    <div class="column-card preparing">
+
+        <span class="status-label">
+            準備中
+        </span>
+
+        <h2>
+            VO₂maxとは？
+        </h2>
+
+        <p>
+            ランナーの持久力を示す指標VO₂maxについて、<br>
+            意味や測定方法、向上のポイントを紹介します。
+        </p>
+
+    </div>
+
+
+    <div class="column-card preparing">
+
+        <span class="status-label">
+            準備中
+        </span>
+
+        <h2>
+            ランニングエコノミーとは？
+        </h2>
+
+        <p>
+            同じペースでも消費するエネルギーが少ないほど有利。<br>
+            ランニングエコノミーの基礎と改善方法を解説します。
+        </p>
+
+    </div>
+
+
+</section>
 
 
     <a
