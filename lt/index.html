@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 
 <meta charset="UTF-8">
@@ -9,13 +8,13 @@
 content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="LTペースとは何か、ダニエルズのTペースとの関係、練習時間や適切な強度、トレーニング効果を分かりやすく解説します。">
+content="LTペースとは何か、ダニエルズのTペースとの関係、適切な練習時間や強度、トレーニング効果をランナー向けにわかりやすく解説します。">
 
 <meta name="robots"
 content="index,follow">
 
 <title>
-LTペースとは？Tペースの意味・練習方法を解説｜由比ヶ浜ラボ
+LTペースとは？Tペースの意味や練習方法を解説｜由比ヶ浜ラボ
 </title>
 
 <style>
@@ -30,8 +29,8 @@ html{
 
 body{
     margin:0;
-    background:#f4f7fc;
-    color:#17213a;
+    background:#f6f9f8;
+    color:#24312f;
 
     font-family:
     -apple-system,
@@ -45,24 +44,19 @@ body{
 
 .page{
     width:100%;
-    max-width:700px;
+    max-width:760px;
     min-height:100vh;
     margin:auto;
     background:#ffffff;
-    box-shadow:0 0 28px rgba(30,60,110,0.08);
+    box-shadow:0 0 28px rgba(35,90,75,.08);
 }
 
-header{
-    padding:20px 22px;
-    border-bottom:1px solid #e4eaf3;
+/* 上部 */
+
+.site-header{
+    padding:18px 22px;
+    border-bottom:1px solid #e2ebe8;
     background:#ffffff;
-}
-
-.header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
 }
 
 .site-name{
@@ -72,176 +66,248 @@ header{
 }
 
 .site-name a{
-    color:#2563eb;
+    color:#2f8673;
     text-decoration:none;
 }
 
-.back-link{
-    color:#64748b;
-    font-size:0.88rem;
-    text-decoration:none;
+/* 記事上部 */
+
+.article-header{
+    padding:38px 22px 28px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #edf7f4 0%,
+        #ffffff 100%
+    );
+
+    border-bottom:1px solid #e2ebe8;
 }
 
-main{
-    padding:34px 24px 50px;
-}
-
-.article-label{
+.category{
     display:inline-block;
-    margin-bottom:13px;
+    margin-bottom:14px;
     padding:5px 12px;
     border-radius:999px;
-    background:#eaf2ff;
-    color:#2563eb;
-    font-size:0.8rem;
+    background:#dcefe9;
+    color:#287562;
+    font-size:.78rem;
     font-weight:700;
 }
 
 h1{
-    margin:0 0 18px;
-    color:#17213a;
-    font-size:1.85rem;
-    line-height:1.45;
-    letter-spacing:0.01em;
+    margin:0;
+    color:#1f2a28;
+    font-size:clamp(1.8rem,6vw,2.6rem);
+    line-height:1.4;
+    letter-spacing:.01em;
 }
 
 .lead{
-    margin:0 0 35px;
-    color:#475569;
+    margin:18px 0 0;
+    color:#596965;
     font-size:1rem;
 }
 
-h2{
-    margin:42px 0 16px;
-    padding-left:12px;
-    border-left:4px solid #2563eb;
-    color:#17213a;
-    font-size:1.35rem;
+.article-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 16px;
+    margin-top:20px;
+    color:#7a8985;
+    font-size:.82rem;
+}
+
+/* 本文 */
+
+.article-body{
+    padding:30px 22px 10px;
+}
+
+.article-body h2{
+    margin:44px 0 18px;
+    padding-left:13px;
+    border-left:5px solid #2f8673;
+    color:#24312f;
+    font-size:1.45rem;
     line-height:1.5;
 }
 
-p{
-    margin:0 0 18px;
+.article-body h3{
+    margin:32px 0 14px;
+    color:#315f55;
+    font-size:1.15rem;
 }
 
-strong{
-    color:#0f172a;
+.article-body p{
+    margin:0 0 22px;
 }
 
-.menu-box{
-    margin:23px 0;
+.article-body ul{
+    margin:0 0 24px;
+    padding-left:1.4rem;
+}
+
+.article-body li{
+    margin-bottom:8px;
+}
+
+/* 強調ボックス */
+
+.highlight-box{
+    margin:28px 0;
     padding:20px;
-    border:1px solid #dbe5f4;
+    border:1px solid #bcded4;
     border-radius:14px;
-    background:#f8fbff;
+    background:#edf8f4;
 }
 
-.menu-box ul{
-    margin:0;
-    padding-left:1.4em;
+.highlight-box strong{
+    color:#287562;
 }
 
-.menu-box li{
-    margin:8px 0;
+.highlight-box p{
+    margin:10px 0 0;
 }
 
-.point-box{
-    margin:25px 0;
-    padding:21px;
-    border-left:5px solid #2563eb;
-    border-radius:4px 14px 14px 4px;
-    background:#eef5ff;
-}
+/* 練習メニュー */
 
-.point-box p{
-    margin:0;
-    color:#1e3a5f;
-    font-weight:700;
-}
-
-.effect-list{
-    margin:22px 0;
-    padding-left:1.4em;
-}
-
-.effect-list li{
-    margin:9px 0;
-}
-
-.summary-box{
-    margin-top:26px;
-    padding:22px;
+.training-box{
+    margin:28px 0;
+    padding:20px;
+    border:1px solid #bcded4;
     border-radius:14px;
-    background:#f1f5f9;
+    background:#edf8f4;
 }
 
-.summary-box p:last-child{
+.training-box ul{
+    margin:0;
+    padding-left:1.4rem;
+}
+
+.training-box li:last-child{
     margin-bottom:0;
 }
 
-.related{
-    margin-top:48px;
-    padding-top:27px;
-    border-top:1px solid #dce3ec;
+/* 補足 */
+
+.note-box{
+    margin:28px 0;
+    padding:18px 20px;
+    border-left:4px solid #70ad9d;
+    border-radius:0 12px 12px 0;
+    background:#f5faf8;
+    color:#465752;
 }
 
-.related h2{
-    margin-top:0;
+/* 関連ページ */
+
+.related-section{
+    margin:42px 22px 0;
+    padding:22px;
+    border-radius:16px;
+    background:#f4f8f7;
+    border:1px solid #dce8e4;
 }
 
-.related-link{
+.related-section h2{
+    margin:0 0 14px;
+    color:#24312f;
+    font-size:1.2rem;
+}
+
+.related-links{
+    display:grid;
+    gap:10px;
+}
+
+.related-links a{
     display:block;
-    margin-bottom:12px;
-    padding:15px 17px;
-    border:1px solid #dbe5f4;
-    border-radius:12px;
-    color:#1d4ed8;
-    font-weight:700;
-    text-decoration:none;
+    position:relative;
+    padding:14px 42px 14px 15px;
+    border-radius:11px;
     background:#ffffff;
-    transition:0.2s;
+    color:#2f8673;
+    text-decoration:none;
+    font-weight:700;
+    border:1px solid #d7e5e1;
 }
 
-.related-link:hover{
-    background:#f5f9ff;
-    transform:translateY(-1px);
-}
-
-.related-note{
-    display:block;
-    margin-top:3px;
-    color:#64748b;
-    font-size:0.83rem;
+.related-links a::after{
+    content:"›";
+    position:absolute;
+    top:50%;
+    right:17px;
+    transform:translateY(-53%);
+    font-size:1.7rem;
     font-weight:400;
 }
 
-footer{
-    padding:24px;
-    border-top:1px solid #e4eaf3;
-    color:#64748b;
-    font-size:0.8rem;
+.related-links a:hover{
+    background:#edf8f4;
+}
+
+/* 戻るボタン */
+
+.back-area{
+    padding:28px 22px 38px;
+}
+
+.back-button{
+    display:block;
+    width:100%;
+    padding:15px 16px;
+    border-radius:14px;
+    background:#2f8673;
+    color:#ffffff;
     text-align:center;
-    background:#f8fafc;
-}
-
-footer a{
-    color:#2563eb;
     text-decoration:none;
+    font-weight:700;
+    box-shadow:0 8px 18px rgba(47,134,115,.18);
 }
 
-@media(max-width:500px){
+.back-button:hover{
+    background:#287562;
+}
 
-    main{
-        padding:28px 20px 44px;
+/* フッター */
+
+.site-footer{
+    padding:24px 22px;
+    border-top:1px solid #e2ebe8;
+    color:#7b8986;
+    text-align:center;
+    font-size:.82rem;
+    background:#fbfdfc;
+}
+
+@media(max-width:520px){
+
+    .article-header{
+        padding-top:31px;
     }
 
-    h1{
-        font-size:1.55rem;
+    .article-body h2{
+        margin-top:38px;
+        font-size:1.3rem;
     }
 
-    h2{
-        font-size:1.2rem;
+    .article-body{
+        padding-left:20px;
+        padding-right:20px;
     }
+
+    .related-section{
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .back-area{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
 }
 
 </style>
@@ -252,39 +318,46 @@ footer a{
 
 <div class="page">
 
-<header>
-
-<div class="header-inner">
+<header class="site-header">
 
 <p class="site-name">
-<a href="https://fvcmpbzj5v-arch.github.io/">
-由比ヶ浜ラボ
+<a href="../">
+由比ヶ浜ラボ コラム
 </a>
 </p>
-
-<a class="back-link" href="../">
-コラム一覧へ
-</a>
-
-</div>
 
 </header>
 
 <main>
 
-<article>
+<header class="article-header">
 
-<span class="article-label">
-ランニング用語
+<span class="category">
+ランニング基礎知識
 </span>
 
 <h1>
-LTペースとは？効率よく走力を伸ばすための「Tペース」を解説
+LTペースとは？Tペースの意味や練習方法を解説
 </h1>
 
 <p class="lead">
-ランニングをしていると、「LTペース」や「テンポ走」という言葉を耳にすることがあります。LTペースの意味や適切な練習強度、トレーニング方法について分かりやすく解説します。
+LTペースは、より速いペースを長く維持する力を伸ばすための重要なトレーニング強度です。
+ダニエルズのTペースとの関係や、適切な練習時間、強度の目安をわかりやすく紹介します。
 </p>
+
+<div class="article-meta">
+
+<span>公開日：2026年7月26日</span>
+
+<span>由比ヶ浜ラボ コラム第2回</span>
+
+</div>
+
+</header>
+
+<article class="article-body">
+
+<h2>LTペースとは？</h2>
 
 <p>
 LTとは、
@@ -293,20 +366,32 @@ LTとは、
 </p>
 
 <p>
-運動の強度を上げていくと、体内でつくられる乳酸の量が増えていきます。LTは、その乳酸が血液中に急激に増え始める境目を表す考え方です。
+走るペースを上げていくと、体内でつくられる乳酸の量が増えていきます。
+LTは、その乳酸が血液中に急激に増え始める境目を表す考え方です。
 </p>
 
 <p>
-LT付近の能力を高めることで、より速いペースを長く維持しやすくなり、5kmからフルマラソンまで幅広い距離のパフォーマンス向上につながります。
+LT付近の能力を高めることで、
+より速いペースを長く維持しやすくなり、
+レース後半の失速を抑えることにもつながります。
 </p>
 
+<div class="highlight-box">
 
-<h2>
-ダニエルズの「Tペース」とは？
-</h2>
+<strong>LTトレーニングの目的</strong>
 
 <p>
-『ダニエルズのランニング・フォーミュラ』では、LT走に用いるペースを
+単純に苦しいペースで走ることではなく、
+乳酸が増えすぎない範囲で、速いペースを安定して維持する能力を高めることです。
+</p>
+
+</div>
+
+<h2>ダニエルズの「Tペース」とは？</h2>
+
+<p>
+『ダニエルズのランニング・フォーミュラ』では、
+LT走に用いるペースを
 <strong>「Tペース（Threshold Pace）」</strong>
 と呼びます。
 </p>
@@ -318,25 +403,28 @@ Tペースは、十分に疲労を抜いて調整した状態であれば、
 </p>
 
 <p>
-ただし、練習で実際に60分間走り続ける必要はありません。
+ただし、通常の練習で実際に60分間走り続ける必要はありません。
 </p>
 
 <p>
-通常のトレーニングでは、
+練習においては、
 <strong>少なくとも20〜30分間は耐えられるペース</strong>
 で走り、適切な刺激を加えていきます。
 </p>
 
+<div class="note-box">
+「60分維持できる」というのは、疲労を抜いて十分に調整した状態での目安です。
+普段の練習では、20〜30分程度の継続走や、短い休息を挟んだ分割走として行うのが一般的です。
+</div>
 
-<h2>
-LT走の代表的なメニュー
-</h2>
+<h2>LT走の代表的なメニュー</h2>
 
 <p>
-LTトレーニングでは、連続して走るテンポ走だけでなく、途中に短い休息を挟む方法もあります。
+LTトレーニングには、連続して走る方法と、
+途中に短いジョギングを挟んで複数本に分ける方法があります。
 </p>
 
-<div class="menu-box">
+<div class="training-box">
 
 <ul>
 
@@ -347,7 +435,7 @@ LTトレーニングでは、連続して走るテンポ走だけでなく、途
 <li>
 10〜15分 × 2〜3本
 <br>
-（本数の間は2〜3分程度のジョギング）
+本数の間は2〜3分程度のジョギング
 </li>
 
 <li>
@@ -359,144 +447,159 @@ LTトレーニングでは、連続して走るテンポ走だけでなく、途
 </div>
 
 <p>
-走力や練習経験に応じて、最初は時間を短くしたり、複数本に分けたりして取り入れると無理なく続けやすくなります。
+初めて取り入れる場合は、
+最初から長く走ろうとせず、
+10分を2本に分けるなど、無理のない形から始めるとよいでしょう。
 </p>
 
-
-<h2>
-LT走の強度の目安
-</h2>
+<h2>LT走の強度の目安</h2>
 
 <p>
-LT走は、全力を出し切るための練習ではありません。
+LT走は、全力を出し切る練習ではありません。
 </p>
 
 <p>
-走り終えたときに膝へ手をつくほど追い込んでいる場合は、設定ペースが少し速すぎる可能性があります。
+トレーニングを終えたときに、
+膝へ手をつくほど追い込んでいる場合は、
+設定ペースが少し速すぎる可能性があります。
 </p>
 
-<div class="point-box">
+<div class="highlight-box">
+
+<strong>適切な終了時の感覚</strong>
 
 <p>
-「あと1kmくらいなら走れそう」と感じる程度の余裕を残して終えるのが目安です。
+「あと1kmくらいなら走れそう」と思える程度の余裕を残して終えるのが目安です。
 </p>
 
 </div>
 
 <p>
-設定ペースが速すぎると、LTトレーニングというよりも、高強度のインターバルトレーニングに近い内容になります。
+設定ペースが速すぎると、
+LTトレーニングというよりも、
+高強度のインターバルトレーニングに近い内容になります。
 </p>
 
 <p>
-苦しさだけを基準にせず、最後までフォームとペースを保てる強度で行うことが大切です。
+苦しさだけで判断せず、
+最後までフォームとペースを保てる強度で行うことが大切です。
 </p>
 
+<h2>LTトレーニングの効果</h2>
 
-<h2>
-LTトレーニングの効果
-</h2>
+<ul>
 
-<p>
-LT付近の強度で継続的にトレーニングを行うことで、次のような効果が期待できます。
-</p>
+<li>より速いペースを長く維持しやすくなる</li>
 
-<ul class="effect-list">
+<li>乳酸を効率よく処理する能力が高まる</li>
 
-<li>
-乳酸を効率よく処理する能力が高まる
-</li>
+<li>同じペースでも余裕を感じやすくなる</li>
 
-<li>
-より速いペースを長く維持しやすくなる
-</li>
+<li>レース後半の失速を抑えやすくなる</li>
 
-<li>
-同じペースでも余裕を感じやすくなる
-</li>
-
-<li>
-レース後半の失速を抑えやすくなる
-</li>
-
-<li>
-持久力の向上につながる
-</li>
+<li>持久力の向上につながる</li>
 
 </ul>
 
 <p>
-特に5km・10km・ハーフマラソン・フルマラソンを目標とするランナーにとって、LTは重要な能力の一つです。
+特に5km、10km、ハーフマラソン、
+フルマラソンを目標とするランナーにとって、
+LTは重要な能力の一つです。
 </p>
 
-
-<h2>
-まとめ
-</h2>
-
-<div class="summary-box">
+<h2>LTペースを決める方法</h2>
 
 <p>
-LTペースは、乳酸が急激に増え始める境目付近の強度で走るトレーニングペースです。
+LTペースは、最近のレース記録やVDOTを参考にして設定できます。
 </p>
 
 <p>
-ダニエルズの理論ではTペースと呼ばれ、十分に調整した状態であれば、およそ60分間維持できる強度が目安になります。
+ただし、気温、疲労、コースの高低差、
+その日の体調によって適切なペースは変わります。
 </p>
 
 <p>
-ただし、実際の練習では20〜30分程度でも十分な刺激を加えられます。
+設定した数字に無理に合わせるのではなく、
+呼吸やフォーム、走り終えたときの余裕も確認しながら調整しましょう。
+</p>
+
+<div class="note-box">
+同じペースでも、暑い日や疲労が残っている日は負荷が高くなります。
+その場合は、数秒ペースを落としたり、時間を短くしたりして調整することが大切です。
+</div>
+
+<h2>まとめ</h2>
+
+<p>
+LTペースは、乳酸が急激に増え始める境目付近で行う
+トレーニングペースです。
+</p>
+
+<p>
+ダニエルズの理論ではTペースと呼ばれ、
+十分に調整した状態であれば、
+およそ60分間維持できる強度が目安になります。
+</p>
+
+<p>
+一方、実際の練習では、
+20〜30分程度の継続走や、
+複数本に分けたトレーニングとして行います。
 </p>
 
 <p>
 <strong>
-「あと1kmなら走れそう」
+「あと1kmくらいなら走れそう」
 </strong>
-と思える程度の余裕を残し、速く走りすぎないことがLTトレーニングを成功させるポイントです。
+と思える程度の余裕を残し、
+速く走りすぎないことがLTトレーニングを成功させるポイントです。
 </p>
-
-</div>
-
-
-<section class="related">
-
-<h2>
-関連記事・関連ツール
-</h2>
-
-<a class="related-link" href="../vdot/">
-VDOTとは？ランニング能力を数値化する指標
-<span class="related-note">
-第1回コラム
-</span>
-</a>
-
-<a class="related-link"
-href="https://fvcmpbzj5v-arch.github.io/half-marathon-predictor/">
-ハーフマラソン予測ツール
-<span class="related-note">
-現在の記録からハーフマラソンの予想タイムを算出
-</span>
-</a>
-
-</section>
 
 </article>
 
+<section class="related-section">
+
+<h2>関連ページ</h2>
+
+<div class="related-links">
+
+<a href="../vdot/">
+VDOTとは？VO₂maxとの違いや活用方法を解説
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/half-marathon-predictor/">
+ハーフマラソン予測
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/3km-predictor/">
+3000m予測
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/">
+由比ヶ浜ラボ トップページ
+</a>
+
+</div>
+
+</section>
+
+<div class="back-area">
+
+<a class="back-button" href="../">
+← コラム一覧へ戻る
+</a>
+
+</div>
+
 </main>
 
-<footer>
+<footer class="site-footer">
 
-<p>
-<a href="https://fvcmpbzj5v-arch.github.io/">
-由比ヶ浜ラボ
-</a>
-｜走る人のための、小さな研究所
-</p>
+© 2026 Yuigahama Lab
 
 </footer>
 
 </div>
 
 </body>
-
 </html>
