@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Eペースとは何か、適切な速さや心拍数、会話できる強度の目安、イージーランの効果や練習時間をランナー向けにわかりやすく解説します。">
+
+<meta name="robots"
+content="index,follow">
+
+<title>
+Eペースとは？イージーランの効果や速さの目安を解説｜由比ヶ浜ラボ
+</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#f6f9f8;
+    color:#24312f;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Yu Gothic",
+    sans-serif;
+
+    line-height:1.9;
+}
+
+.page{
+    width:100%;
+    max-width:760px;
+    min-height:100vh;
+    margin:auto;
+    background:#ffffff;
+    box-shadow:0 0 28px rgba(35,90,75,.08);
+}
+
+/* 上部 */
+
+.site-header{
+    padding:18px 22px;
+    border-bottom:1px solid #e2ebe8;
+    background:#ffffff;
+}
+
+.site-name{
+    margin:0;
+    font-size:1rem;
+    font-weight:700;
+}
+
+.site-name a{
+    color:#2f8673;
+    text-decoration:none;
+}
+
+/* 記事上部 */
+
+.article-header{
+    padding:38px 22px 28px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #edf7f4 0%,
+        #ffffff 100%
+    );
+
+    border-bottom:1px solid #e2ebe8;
+}
+
+.category{
+    display:inline-block;
+    margin-bottom:14px;
+    padding:5px 12px;
+    border-radius:999px;
+    background:#dcefe9;
+    color:#287562;
+    font-size:.78rem;
+    font-weight:700;
+}
+
+h1{
+    margin:0;
+    color:#1f2a28;
+    font-size:clamp(1.8rem,6vw,2.6rem);
+    line-height:1.4;
+    letter-spacing:.01em;
+}
+
+.lead{
+    margin:18px 0 0;
+    color:#596965;
+    font-size:1rem;
+}
+
+.article-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 16px;
+    margin-top:20px;
+    color:#7a8985;
+    font-size:.82rem;
+}
+
+/* 本文 */
+
+.article-body{
+    padding:30px 22px 10px;
+}
+
+.article-body h2{
+    margin:44px 0 18px;
+    padding-left:13px;
+    border-left:5px solid #2f8673;
+    color:#24312f;
+    font-size:1.45rem;
+    line-height:1.5;
+}
+
+.article-body h3{
+    margin:32px 0 14px;
+    color:#315f55;
+    font-size:1.15rem;
+}
+
+.article-body p{
+    margin:0 0 22px;
+}
+
+.article-body ul{
+    margin:0 0 24px;
+    padding-left:1.4rem;
+}
+
+.article-body li{
+    margin-bottom:8px;
+}
+
+/* 強調ボックス */
+
+.highlight-box{
+    margin:28px 0;
+    padding:20px;
+    border:1px solid #bcded4;
+    border-radius:14px;
+    background:#edf8f4;
+}
+
+.highlight-box strong{
+    color:#287562;
+}
+
+.highlight-box p{
+    margin:10px 0 0;
+}
+
+/* 練習メニュー */
+
+.training-box{
+    margin:28px 0;
+    padding:20px;
+    border:1px solid #bcded4;
+    border-radius:14px;
+    background:#edf8f4;
+}
+
+.training-box ul{
+    margin:0;
+    padding-left:1.4rem;
+}
+
+.training-box li:last-child{
+    margin-bottom:0;
+}
+
+/* 補足 */
+
+.note-box{
+    margin:28px 0;
+    padding:18px 20px;
+    border-left:4px solid #70ad9d;
+    border-radius:0 12px 12px 0;
+    background:#f5faf8;
+    color:#465752;
+}
+
+/* 参考情報 */
+
+.source-section{
+    margin-top:44px;
+    padding-top:24px;
+    border-top:1px solid #e2ebe8;
+}
+
+.source-section h2{
+    margin-top:0;
+}
+
+.source-links{
+    margin:0;
+    padding-left:1.4rem;
+}
+
+.source-links li{
+    margin-bottom:12px;
+}
+
+.source-links a{
+    color:#2f8673;
+    overflow-wrap:anywhere;
+}
+
+/* 関連ページ */
+
+.related-section{
+    margin:42px 22px 0;
+    padding:22px;
+    border-radius:16px;
+    background:#f4f8f7;
+    border:1px solid #dce8e4;
+}
+
+.related-section h2{
+    margin:0 0 14px;
+    color:#24312f;
+    font-size:1.2rem;
+}
+
+.related-links{
+    display:grid;
+    gap:10px;
+}
+
+.related-links a{
+    display:block;
+    position:relative;
+    padding:14px 42px 14px 15px;
+    border-radius:11px;
+    background:#ffffff;
+    color:#2f8673;
+    text-decoration:none;
+    font-weight:700;
+    border:1px solid #d7e5e1;
+}
+
+.related-links a::after{
+    content:"›";
+    position:absolute;
+    top:50%;
+    right:17px;
+    transform:translateY(-53%);
+    font-size:1.7rem;
+    font-weight:400;
+}
+
+.related-links a:hover{
+    background:#edf8f4;
+}
+
+/* 戻るボタン */
+
+.back-area{
+    padding:28px 22px 38px;
+}
+
+.back-button{
+    display:block;
+    width:100%;
+    padding:15px 16px;
+    border-radius:14px;
+    background:#2f8673;
+    color:#ffffff;
+    text-align:center;
+    text-decoration:none;
+    font-weight:700;
+    box-shadow:0 8px 18px rgba(47,134,115,.18);
+}
+
+.back-button:hover{
+    background:#287562;
+}
+
+/* フッター */
+
+.site-footer{
+    padding:24px 22px;
+    border-top:1px solid #e2ebe8;
+    color:#7b8986;
+    text-align:center;
+    font-size:.82rem;
+    background:#fbfdfc;
+}
+
+@media(max-width:520px){
+
+    .article-header{
+        padding-top:31px;
+    }
+
+    .article-body h2{
+        margin-top:38px;
+        font-size:1.3rem;
+    }
+
+    .article-body{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .related-section{
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .back-area{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="site-header">
+
+<p class="site-name">
+<a href="../">
+由比ヶ浜ラボ コラム
+</a>
+</p>
+
+</header>
+
+<main>
+
+<header class="article-header">
+
+<span class="category">
+ランニング基礎知識
+</span>
+
+<h1>
+Eペースとは？イージーランの効果や速さの目安を解説
+</h1>
+
+<p class="lead">
+Eペースは、会話ができる程度の余裕を持って走るトレーニングペースです。
+適切な速さの目安や練習時間、ゆっくり走ることがランナーにとって重要な理由をわかりやすく紹介します。
+</p>
+
+<div class="article-meta">
+
+<span>公開日：2026年8月2日</span>
+
+<span>由比ヶ浜ラボ コラム第3回</span>
+
+</div>
+
+</header>
+
+<article class="article-body">
+
+<h2>Eペースとは？</h2>
+
+<p>
+Eペースの「E」は、
+<strong>Easy（イージー）</strong>
+を意味します。
+</p>
+
+<p>
+呼吸に余裕があり、無理なく走り続けられる強度で行うランニングです。
+一般的には、隣の人と会話を続けられる程度のペースが目安になります。
+</p>
+
+<p>
+ダニエルズのランニング理論では、
+ウォーミングアップ、クールダウン、回復ジョグ、
+普段のジョギングやロングランなどにEペースが用いられます。
+</p>
+
+<div class="highlight-box">
+
+<strong>Eペースの基本</strong>
+
+<p>
+息を切らして速く走ることではなく、
+余裕のある強度を保ちながら、無理なく走る時間を積み重ねるためのペースです。
+</p>
+
+</div>
+
+<h2>Eペースの速さの目安</h2>
+
+<p>
+Eペースは、単に「できるだけ遅く走るペース」ではありません。
+</p>
+
+<p>
+姿勢やフォームを大きく崩さず、
+呼吸に余裕を持って走り続けられる範囲で設定します。
+</p>
+
+<p>
+ダニエルズのVDOTを基準にした場合、
+Eペースは一般的に
+<strong>最大酸素摂取量の約59〜74％</strong>、
+または
+<strong>最大心拍数の約65〜79％</strong>
+が一つの目安とされています。
+</p>
+
+<p>
+ただし、心拍数や適切なペースには個人差があります。
+数字だけでなく、実際の呼吸や身体の感覚も確認することが大切です。
+</p>
+
+<div class="highlight-box">
+
+<strong>会話できるかを確認する</strong>
+
+<p>
+短い返事だけでなく、ある程度まとまった会話を続けられるなら、
+Eペースとして適切な強度で走れている可能性が高いでしょう。
+</p>
+
+</div>
+
+<h2>同じランナーでもEペースは毎日変わる</h2>
+
+<p>
+Eペースは、毎回まったく同じ速さで走らなければならないものではありません。
+</p>
+
+<p>
+その日の疲労、気温、湿度、風、コースの高低差、
+睡眠状態などによって、同じ速さでも身体にかかる負担は変わります。
+</p>
+
+<p>
+特に暑い日や疲労が残っている日は、
+普段より遅いペースでも十分なトレーニングになります。
+</p>
+
+<div class="note-box">
+時計に表示されるペースよりも、呼吸に余裕があるか、フォームを保てているか、
+走り終わったあとに強い疲労が残っていないかを優先しましょう。
+</div>
+
+<h2>Eペースで走る目的</h2>
+
+<p>
+Eペースは楽に感じやすいため、
+「こんなにゆっくり走って意味があるのか」と思う人もいるかもしれません。
+</p>
+
+<p>
+しかし、Eペースには、
+速い練習とは異なる重要な役割があります。
+</p>
+
+<ul>
+
+<li>持久力の土台をつくる</li>
+
+<li>長い時間、身体を動かす力を養う</li>
+
+<li>心肺機能や筋肉の持久的な働きを高める</li>
+
+<li>ランニングに必要な脚づくりにつながる</li>
+
+<li>速い練習の前後に身体を整える</li>
+
+<li>疲労を抑えながら練習量を確保しやすい</li>
+
+</ul>
+
+<p>
+LT走やインターバル走は、
+速く走る能力を高めるために重要なトレーニングです。
+</p>
+
+<p>
+一方で、高い強度の練習ばかりを続けると、
+疲労が大きくなり、十分に回復できないまま次の練習を迎えやすくなります。
+</p>
+
+<p>
+Eペースを活用することで、
+負担を抑えながら継続的に走る時間を確保できます。
+</p>
+
+<h2>なんやかんや、ゆっくり長く走れることが大切</h2>
+
+<p>
+ランニングでは、速いペースで走る練習が目立ちます。
+記録を伸ばすためには、LT走やインターバル走などの質の高い練習も必要です。
+</p>
+
+<p>
+しかし、そのような練習を継続し、
+レースの後半まで力を保つためには、
+<strong>余裕のあるペースで長い時間走れる土台</strong>
+が欠かせません。
+</p>
+
+<div class="highlight-box">
+
+<strong>速い練習を支えるのがEペース</strong>
+
+<p>
+Eペースは派手な練習ではありません。
+それでも、無理のないペースで走れる時間や距離が少しずつ伸びることは、
+ランナーとしての基礎体力が高まっている一つの表れです。
+</p>
+
+</div>
+
+<p>
+短時間の速い練習だけでは、
+長時間走り続けるための脚や持久力を十分に育てることはできません。
+</p>
+
+<p>
+反対に、ゆっくりしたペースだからといって、
+急に走行距離を増やせばよいわけでもありません。
+</p>
+
+<p>
+無理なく回復できる範囲で少しずつ時間を伸ばし、
+継続して走ることが大切です。
+</p>
+
+<p>
+結局のところ、
+<strong>
+この余裕のあるペースで、どれだけ継続的に走る時間を積み重ねられるか
+</strong>
+が、長期的な走力向上を左右する重要な要素になります。
+</p>
+
+<h2>Eペースの代表的な練習</h2>
+
+<p>
+Eペースは、目的に応じてさまざまな場面で使われます。
+</p>
+
+<div class="training-box">
+
+<ul>
+
+<li>
+30〜60分程度の普段のジョギング
+</li>
+
+<li>
+疲労を抜くための短い回復ジョグ
+</li>
+
+<li>
+ポイント練習前のウォーミングアップ
+</li>
+
+<li>
+ポイント練習後のクールダウン
+</li>
+
+<li>
+60分以上のロングラン
+</li>
+
+</ul>
+
+</div>
+
+<p>
+始めたばかりのランナーは、
+最初から長時間走る必要はありません。
+</p>
+
+<p>
+20〜30分程度から始め、
+身体が慣れてきたら少しずつ走る時間を伸ばしていきましょう。
+</p>
+
+<h2>Eペースは遅いほどよい？</h2>
+
+<p>
+Eペースでは、速く走りすぎないことが重要です。
+ただし、遅ければ遅いほど効果が高くなるわけではありません。
+</p>
+
+<p>
+極端にペースを落としたことでフォームが不自然になったり、
+接地のたびに身体が大きく上下したりする場合は、
+かえって走りにくくなることがあります。
+</p>
+
+<p>
+呼吸に余裕があり、
+自然なフォームを保てる範囲のなかで、
+その日に心地よく走れるペースを選びましょう。
+</p>
+
+<div class="note-box">
+疲労回復を目的とする日はかなりゆっくりでも構いません。
+一方、通常のEペース走では、楽に会話できる範囲で自然に走れる速さを目安にします。
+</div>
+
+<h2>Eペースでよくある失敗</h2>
+
+<h3>毎回ペースを上げてしまう</h3>
+
+<p>
+調子がよい日は、予定より速く走りたくなることがあります。
+しかし、Eペースの日まで頑張りすぎると、
+次のポイント練習に疲労を残してしまいます。
+</p>
+
+<p>
+Eペース走の目的は、その日の最速タイムを出すことではありません。
+余裕を持って終えることもトレーニングの一部です。
+</p>
+
+<h3>走行距離を急に増やす</h3>
+
+<p>
+ゆっくりしたペースでも、
+走る時間や距離が増えれば身体への負担は大きくなります。
+</p>
+
+<p>
+一度に大きく増やさず、
+身体の状態を確認しながら段階的に増やしましょう。
+</p>
+
+<h3>速い練習をすべてEペースに置き換える</h3>
+
+<p>
+Eペースは持久力の土台をつくる重要な練習ですが、
+すべての能力をEペースだけで伸ばせるわけではありません。
+</p>
+
+<p>
+レースで速く走るためには、
+目標や走力に応じてLT走、インターバル走、
+レースペース走などを組み合わせる必要があります。
+</p>
+
+<h2>Eペースを決める方法</h2>
+
+<p>
+Eペースは、最近のレース記録から算出したVDOTを参考にして設定できます。
+</p>
+
+<p>
+ただし、算出されたペースは絶対に守らなければならない数字ではありません。
+</p>
+
+<p>
+気温や疲労によって負荷が高く感じられる日は、
+設定よりもペースを落として問題ありません。
+</p>
+
+<p>
+反対に、調子がよく自然に少し速くなる日でも、
+会話が難しくなるほどペースを上げないようにしましょう。
+</p>
+
+<div class="highlight-box">
+
+<strong>Eペースで優先したいこと</strong>
+
+<p>
+設定タイムに合わせることよりも、
+会話できる余裕を保ち、翌日以降の練習に大きな疲労を残さないことを優先します。
+</p>
+
+</div>
+
+<h2>まとめ</h2>
+
+<p>
+Eペースは、会話ができる程度の余裕を持って走る
+基本的なトレーニングペースです。
+</p>
+
+<p>
+ウォーミングアップ、クールダウン、回復ジョグ、
+普段のジョギングやロングランなど、
+さまざまな場面で使用されます。
+</p>
+
+<p>
+速い練習のような強い達成感は得にくいかもしれません。
+しかし、余裕のあるペースで走る時間を継続的に積み重ねることは、
+持久力や脚づくりの土台になります。
+</p>
+
+<p>
+<strong>
+なんやかんや、ゆっくりしたペースで長い時間を無理なく走れることが、
+ランナーとして強くなるためには重要です。
+</strong>
+</p>
+
+<p>
+速く走りすぎず、遅さだけにもこだわらず、
+その日の身体に合った余裕のあるペースで継続していきましょう。
+</p>
+
+<section class="source-section">
+
+<h2>参考情報</h2>
+
+<ul class="source-links">
+
+<li>
+<a href="https://vdoto2.com/calculator"
+target="_blank"
+rel="noopener noreferrer">
+V.O2 Running Calculator｜Easy Pace
+</a>
+</li>
+
+<li>
+<a href="https://vdoto2.com/learn-more/training-definitions"
+target="_blank"
+rel="noopener noreferrer">
+V.O2 Training Definitions｜Easy Pace
+</a>
+</li>
+
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/34749417/"
+target="_blank"
+rel="noopener noreferrer">
+Training-intensity Distribution on Middle- and Long-distance Runners
+</a>
+</li>
+
+</ul>
+
+</section>
+
+</article>
+
+<section class="related-section">
+
+<h2>関連ページ</h2>
+
+<div class="related-links">
+
+<a href="../vdot/">
+VDOTとは？VO₂maxとの違いや活用方法を解説
+</a>
+
+<a href="../lt/">
+LTペースとは？Tペースの意味や練習方法を解説
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/half-marathon-predictor/">
+ハーフマラソン予測
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/10km-predictor/">
+10km予測
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/">
+由比ヶ浜ラボ トップページ
+</a>
+
+</div>
+
+</section>
+
+<div class="back-area">
+
+<a class="back-button" href="../">
+← コラム一覧へ戻る
+</a>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+
+© 2026 Yuigahama Lab
+
+</footer>
+
+</div>
+
+</body>
+</html>
