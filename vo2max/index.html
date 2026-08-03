@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="VO2maxとは何か、数値の意味や単位、測定方法、スマートウォッチによる推定値、VDOTとの違いをランナー向けにわかりやすく解説します。">
+
+<meta name="robots"
+content="index,follow">
+
+<title>
+VO₂maxとは？意味・測定方法・VDOTとの違いを解説｜由比ヶ浜ラボ
+</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#f6f9f8;
+    color:#24312f;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Yu Gothic",
+    sans-serif;
+
+    line-height:1.9;
+}
+
+.page{
+    width:100%;
+    max-width:760px;
+    min-height:100vh;
+    margin:auto;
+    background:#ffffff;
+    box-shadow:0 0 28px rgba(35,90,75,.08);
+}
+
+/* 上部 */
+
+.site-header{
+    padding:18px 22px;
+    border-bottom:1px solid #e2ebe8;
+    background:#ffffff;
+}
+
+.site-name{
+    margin:0;
+    font-size:1rem;
+    font-weight:700;
+}
+
+.site-name a{
+    color:#2f8673;
+    text-decoration:none;
+}
+
+/* 記事上部 */
+
+.article-header{
+    padding:38px 22px 28px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #edf7f4 0%,
+        #ffffff 100%
+    );
+
+    border-bottom:1px solid #e2ebe8;
+}
+
+.category{
+    display:inline-block;
+    margin-bottom:14px;
+    padding:5px 12px;
+    border-radius:999px;
+    background:#dcefe9;
+    color:#287562;
+    font-size:.78rem;
+    font-weight:700;
+}
+
+h1{
+    margin:0;
+    color:#1f2a28;
+    font-size:clamp(1.8rem,6vw,2.6rem);
+    line-height:1.4;
+    letter-spacing:.01em;
+}
+
+.lead{
+    margin:18px 0 0;
+    color:#596965;
+    font-size:1rem;
+}
+
+.article-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 16px;
+    margin-top:20px;
+    color:#7a8985;
+    font-size:.82rem;
+}
+
+/* 本文 */
+
+.article-body{
+    padding:30px 22px 10px;
+}
+
+.article-body h2{
+    margin:44px 0 18px;
+    padding-left:13px;
+    border-left:5px solid #2f8673;
+    color:#24312f;
+    font-size:1.45rem;
+    line-height:1.5;
+}
+
+.article-body h3{
+    margin:32px 0 14px;
+    color:#315f55;
+    font-size:1.15rem;
+}
+
+.article-body p{
+    margin:0 0 22px;
+}
+
+.article-body ul{
+    margin:0 0 24px;
+    padding-left:1.4rem;
+}
+
+.article-body li{
+    margin-bottom:8px;
+}
+
+/* 強調ボックス */
+
+.highlight-box{
+    margin:28px 0;
+    padding:20px;
+    border:1px solid #bcded4;
+    border-radius:14px;
+    background:#edf8f4;
+}
+
+.highlight-box strong{
+    color:#287562;
+}
+
+.highlight-box p{
+    margin:10px 0 0;
+}
+
+/* 練習メニュー */
+
+.training-box{
+    margin:28px 0;
+    padding:20px;
+    border:1px solid #bcded4;
+    border-radius:14px;
+    background:#edf8f4;
+}
+
+.training-box ul{
+    margin:0;
+    padding-left:1.4rem;
+}
+
+.training-box li:last-child{
+    margin-bottom:0;
+}
+
+/* 補足 */
+
+.note-box{
+    margin:28px 0;
+    padding:18px 20px;
+    border-left:4px solid #70ad9d;
+    border-radius:0 12px 12px 0;
+    background:#f5faf8;
+    color:#465752;
+}
+
+/* 計算式 */
+
+.formula-box{
+    margin:28px 0;
+    padding:20px;
+    border:1px solid #c9ddd7;
+    border-radius:14px;
+    background:#fbfdfc;
+    text-align:center;
+}
+
+.formula-title{
+    display:block;
+    margin-bottom:12px;
+    color:#287562;
+    font-weight:700;
+}
+
+.formula{
+    display:block;
+    margin:8px 0;
+    color:#24312f;
+    font-size:1.05rem;
+    font-weight:700;
+    line-height:1.7;
+}
+
+.formula-example{
+    margin:14px 0 0;
+    color:#596965;
+    font-size:.92rem;
+}
+
+/* 比較表 */
+
+.comparison-table{
+    width:100%;
+    margin:28px 0;
+    border-collapse:collapse;
+    font-size:.94rem;
+}
+
+.comparison-table th,
+.comparison-table td{
+    padding:13px 12px;
+    border:1px solid #d7e5e1;
+    text-align:left;
+    vertical-align:top;
+}
+
+.comparison-table th{
+    background:#edf8f4;
+    color:#287562;
+    font-weight:700;
+}
+
+.comparison-table td:first-child{
+    width:28%;
+    font-weight:700;
+}
+
+/* 参考情報 */
+
+.source-section{
+    margin-top:44px;
+    padding-top:24px;
+    border-top:1px solid #e2ebe8;
+}
+
+.source-section h2{
+    margin-top:0;
+}
+
+.source-links{
+    margin:0;
+    padding-left:1.4rem;
+}
+
+.source-links li{
+    margin-bottom:12px;
+}
+
+.source-links a{
+    color:#2f8673;
+    overflow-wrap:anywhere;
+}
+
+/* 関連ページ */
+
+.related-section{
+    margin:42px 22px 0;
+    padding:22px;
+    border-radius:16px;
+    background:#f4f8f7;
+    border:1px solid #dce8e4;
+}
+
+.related-section h2{
+    margin:0 0 14px;
+    color:#24312f;
+    font-size:1.2rem;
+}
+
+.related-links{
+    display:grid;
+    gap:10px;
+}
+
+.related-links a{
+    display:block;
+    position:relative;
+    padding:14px 42px 14px 15px;
+    border-radius:11px;
+    background:#ffffff;
+    color:#2f8673;
+    text-decoration:none;
+    font-weight:700;
+    border:1px solid #d7e5e1;
+}
+
+.related-links a::after{
+    content:"›";
+    position:absolute;
+    top:50%;
+    right:17px;
+    transform:translateY(-53%);
+    font-size:1.7rem;
+    font-weight:400;
+}
+
+.related-links a:hover{
+    background:#edf8f4;
+}
+
+/* 戻るボタン */
+
+.back-area{
+    padding:28px 22px 38px;
+}
+
+.back-button{
+    display:block;
+    width:100%;
+    padding:15px 16px;
+    border-radius:14px;
+    background:#2f8673;
+    color:#ffffff;
+    text-align:center;
+    text-decoration:none;
+    font-weight:700;
+    box-shadow:0 8px 18px rgba(47,134,115,.18);
+}
+
+.back-button:hover{
+    background:#287562;
+}
+
+/* フッター */
+
+.site-footer{
+    padding:24px 22px;
+    border-top:1px solid #e2ebe8;
+    color:#7b8986;
+    text-align:center;
+    font-size:.82rem;
+    background:#fbfdfc;
+}
+
+@media(max-width:520px){
+
+    .article-header{
+        padding-top:31px;
+    }
+
+    .article-body h2{
+        margin-top:38px;
+        font-size:1.3rem;
+    }
+
+    .article-body{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .comparison-table{
+        font-size:.84rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td{
+        padding:10px 8px;
+    }
+
+    .related-section{
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .back-area{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="site-header">
+
+<p class="site-name">
+<a href="../">
+由比ヶ浜ラボ コラム
+</a>
+</p>
+
+</header>
+
+<main>
+
+<header class="article-header">
+
+<span class="category">
+ランニング基礎知識
+</span>
+
+<h1>
+VO₂maxとは？意味・測定方法・VDOTとの違いを解説
+</h1>
+
+<p class="lead">
+VO₂maxは、持久力を表す代表的な指標の一つです。
+数値の意味や単位、測定方法、スマートウォッチに表示される推定値、VDOTとの違いをわかりやすく紹介します。
+</p>
+
+<div class="article-meta">
+
+<span>公開日：2026年8月3日</span>
+
+<span>由比ヶ浜ラボ コラム第4回</span>
+
+</div>
+
+</header>
+
+<article class="article-body">
+
+<h2>VO₂maxとは？</h2>
+
+<p>
+VO₂max（ブイオーツーマックス）とは、
+<strong>最大酸素摂取量</strong>
+のことです。
+</p>
+
+<p>
+運動強度を高めていったときに、
+身体が取り込み、運動のために利用できる酸素量の最大値を表します。
+</p>
+
+<p>
+ランニングでは、酸素を利用してエネルギーをつくります。
+そのためVO₂maxは、持久的な運動能力を考えるうえで重要な指標の一つです。
+</p>
+
+<div class="highlight-box">
+
+<strong>VO₂maxは持久力の上限に関係する指標</strong>
+
+<p>
+VO₂maxが高いほど、
+高い運動強度でも多くの酸素を利用できる可能性があります。
+ただし、VO₂maxの数値だけでレースの速さが決まるわけではありません。
+</p>
+
+</div>
+
+<h2>VO₂maxの「VO₂」は何を意味する？</h2>
+
+<p>
+VO₂maxは、次の言葉から成り立っています。
+</p>
+
+<ul>
+
+<li>
+<strong>V</strong>：Volume（量）
+</li>
+
+<li>
+<strong>O₂</strong>：Oxygen（酸素）
+</li>
+
+<li>
+<strong>max</strong>：Maximum（最大）
+</li>
+
+</ul>
+
+<p>
+正式な表記ではVの上に点が付き、
+一定時間あたりの酸素摂取量を意味します。
+</p>
+
+<p>
+つまりVO₂maxは、
+単なる酸素の量ではなく、
+<strong>1分間あたりに身体が利用できる酸素量の最大値</strong>
+を表す指標です。
+</p>
+
+<h2>VO₂maxの単位</h2>
+
+<p>
+VO₂maxには、主に2種類の表し方があります。
+</p>
+
+<h3>絶対値</h3>
+
+<p>
+身体全体で1分間に利用できる酸素量を、
+<strong>L/分</strong>
+または
+<strong>ml/分</strong>
+で表します。
+</p>
+
+<p>
+身体が大きい人ほど数値も大きくなりやすいため、
+体格の異なるランナー同士を比較する場合には注意が必要です。
+</p>
+
+<h3>相対値</h3>
+
+<p>
+体重1kgあたり、1分間に利用できる酸素量を、
+<strong>ml/kg/分</strong>
+で表します。
+</p>
+
+<p>
+ランニングウォッチなどに表示されるVO₂maxは、
+一般的にこの相対値です。
+</p>
+
+<div class="formula-box">
+
+<span class="formula-title">
+相対的VO₂maxの計算式
+</span>
+
+<span class="formula">
+絶対的VO₂max（L/分）× 1,000 ÷ 体重（kg）
+</span>
+
+<p class="formula-example">
+例：絶対的VO₂maxが3.5L/分、体重が70kgの場合<br>
+3.5 × 1,000 ÷ 70 ＝ 50ml/kg/分
+</p>
+
+</div>
+
+<div class="note-box">
+相対値は体重で割って算出します。
+そのため、身体の酸素利用能力が同じでも、体重が変化すると表示される数値が変わる場合があります。
+</div>
+
+<h2>VO₂maxが高いほど速く走れる？</h2>
+
+<p>
+VO₂maxが高いことは、
+中長距離走やマラソンにおいて有利な要素の一つです。
+</p>
+
+<p>
+しかし、
+<strong>VO₂maxが高ければ必ず速く走れるわけではありません。</strong>
+</p>
+
+<p>
+レースタイムには、
+VO₂max以外にもさまざまな能力が関係します。
+</p>
+
+<ul>
+
+<li>LT付近でどれだけ速いペースを維持できるか</li>
+
+<li>酸素を効率よく走る動作へ変えられるか</li>
+
+<li>ランニングフォームやランニングエコノミー</li>
+
+<li>脚の筋持久力や疲労への耐性</li>
+
+<li>レースでのペース配分</li>
+
+<li>気温、風、高低差などの環境条件</li>
+
+</ul>
+
+<div class="highlight-box">
+
+<strong>VO₂maxはエンジンの大きさに近い</strong>
+
+<p>
+大きなエンジンを持っていても、
+その力を効率よく前へ進む力に変えられなければ、
+必ずしも速く走れるとは限りません。
+</p>
+
+</div>
+
+<p>
+反対に、VO₂maxが飛び抜けて高くなくても、
+LT能力やランニングエコノミーに優れていれば、
+高いレースパフォーマンスを発揮できる場合があります。
+</p>
+
+<h2>VO₂maxとVDOTの違い</h2>
+
+<p>
+VO₂maxとVDOTは、
+近い数値として表示されることがありますが、
+同じものではありません。
+</p>
+
+<table class="comparison-table">
+
+<thead>
+
+<tr>
+<th>項目</th>
+<th>VO₂max</th>
+<th>VDOT</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>何を表すか</td>
+<td>身体が利用できる最大酸素量</td>
+<td>レース結果から評価した現在の走力</td>
+</tr>
+
+<tr>
+<td>主な算出方法</td>
+<td>呼気ガス測定や機器による推定</td>
+<td>レースの距離とタイムから算出</td>
+</tr>
+
+<tr>
+<td>主な用途</td>
+<td>有酸素能力の評価</td>
+<td>走力評価や練習ペースの設定</td>
+</tr>
+
+<tr>
+<td>実測できるか</td>
+<td>専用設備を使って測定できる</td>
+<td>生理学的な実測値ではない</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+VO₂maxは、
+身体の有酸素能力を表す生理学的な指標です。
+</p>
+
+<p>
+一方のVDOTは、
+実際のレース記録から、
+そのランナーがどれほどの走力を発揮したかを評価する指標です。
+</p>
+
+<div class="highlight-box">
+
+<strong>VO₂maxは身体能力、VDOTは発揮できた走力</strong>
+
+<p>
+VO₂maxが同じランナーでも、
+ランニングエコノミーや持久力、レース展開によって、
+VDOTやレースタイムは異なる場合があります。
+</p>
+
+</div>
+
+<p>
+VDOTはVO₂maxの測定値そのものではありません。
+</p>
+
+<p>
+レース結果をもとにした、
+<strong>実用的な走力指標</strong>
+として考えると分かりやすいでしょう。
+</p>
+
+<h2>VO₂maxを測る方法</h2>
+
+<h3>呼気ガスを使った測定</h3>
+
+<p>
+VO₂maxを直接測定する代表的な方法は、
+トレッドミルや自転車エルゴメーターを使い、
+段階的に運動強度を上げながら呼気を分析する方法です。
+</p>
+
+<p>
+マスクを装着し、
+吸い込んだ酸素量と吐き出した酸素量などを測定します。
+</p>
+
+<p>
+専門的な設備が必要ですが、
+VO₂maxを詳しく把握したい場合には、
+最も直接的な測定方法です。
+</p>
+
+<h3>スマートウォッチによる推定</h3>
+
+<p>
+多くのランニングウォッチには、
+VO₂maxの推定機能があります。
+</p>
+
+<p>
+走行ペースや心拍数、年齢、性別などの情報をもとに、
+VO₂maxに相当する数値を推定します。
+</p>
+
+<div class="note-box">
+スマートウォッチに表示されるVO₂maxは、
+呼気ガスを測定した実測値ではありません。
+使用する機器や測定条件、心拍数の精度などによって結果が変わる可能性があります。
+</div>
+
+<h3>レースや走行テストからの推定</h3>
+
+<p>
+一定距離のタイムや、
+一定時間内に走った距離から、
+VO₂maxに近い値を推定する方法もあります。
+</p>
+
+<p>
+代表的なものには、
+12分間走などのフィールドテストがあります。
+</p>
+
+<p>
+ただし、走行テストの結果には、
+VO₂maxだけでなく、ペース配分、走り慣れ、
+ランニングエコノミーなども影響します。
+</p>
+
+<p>
+そのため、走行テストから算出される数値は、
+あくまで推定値として考える必要があります。
+</p>
+
+<h2>スマートウォッチのVO₂maxは正確？</h2>
+
+<p>
+スマートウォッチのVO₂maxは、
+日々の状態を確認する目安として便利です。
+</p>
+
+<p>
+一方で、表示される数値を
+完全な実測値として扱うのは適切ではありません。
+</p>
+
+<p>
+推定結果には、次のような条件が影響します。
+</p>
+
+<ul>
+
+<li>手首で測定した心拍数の誤差</li>
+
+<li>気温や湿度</li>
+
+<li>坂道や向かい風</li>
+
+<li>疲労や睡眠不足</li>
+
+<li>走行時間やペースの変化</li>
+
+<li>機器ごとの推定方法</li>
+
+</ul>
+
+<div class="highlight-box">
+
+<strong>1回の数字よりも変化を見る</strong>
+
+<p>
+表示された数値そのものにこだわりすぎず、
+同じ機器を継続して使ったときに、
+どのような傾向で変化しているかを見ると活用しやすくなります。
+</p>
+
+</div>
+
+<p>
+例えば、ある日の数値が少し下がったとしても、
+すぐに体力が落ちたと判断する必要はありません。
+</p>
+
+<p>
+暑さや疲労によって心拍数が上がり、
+一時的に低く推定されている可能性もあります。
+</p>
+
+<h2>VO₂maxを高めるトレーニング</h2>
+
+<p>
+VO₂maxを高める刺激としては、
+高い有酸素運動強度で行うインターバルトレーニングが代表的です。
+</p>
+
+<div class="training-box">
+
+<ul>
+
+<li>
+3〜5分程度のインターバル走
+</li>
+
+<li>
+1000mなどを複数本行うトレーニング
+</li>
+
+<li>
+坂道を利用した高強度の反復走
+</li>
+
+<li>
+短い休息を挟みながら行う有酸素インターバル
+</li>
+
+</ul>
+
+</div>
+
+<p>
+ただし、VO₂maxを高めるために、
+毎回高強度で走ればよいわけではありません。
+</p>
+
+<p>
+インターバル走を継続するためには、
+Eペースで走る持久力の土台や、
+練習後に回復する力も重要です。
+</p>
+
+<p>
+また、LT走や普段の有酸素トレーニングも、
+レースで有酸素能力を活用するために役立ちます。
+</p>
+
+<div class="note-box">
+高強度トレーニングは身体への負担も大きくなります。
+走力や練習経験に合わせて本数や時間を調整し、
+十分な回復を確保しましょう。
+</div>
+
+<h2>VO₂maxが伸びればレースタイムも伸びる？</h2>
+
+<p>
+VO₂maxが向上すれば、
+レースタイムが伸びる可能性はあります。
+</p>
+
+<p>
+しかし、レースタイムが伸びる理由は、
+VO₂maxの向上だけとは限りません。
+</p>
+
+<p>
+トレーニングによって、
+同じ酸素量でも以前より速く走れるようになったり、
+速いペースを長く維持できるようになったりする場合があります。
+</p>
+
+<p>
+これは、ランニングエコノミーやLT能力、
+筋持久力などが向上した結果とも考えられます。
+</p>
+
+<div class="highlight-box">
+
+<strong>VO₂maxが変わらなくても速くなることはある</strong>
+
+<p>
+スマートウォッチの数値が変わっていなくても、
+同じ心拍数で速く走れるようになったり、
+レース後半の失速が減ったりしていれば、
+走力は向上している可能性があります。
+</p>
+
+</div>
+
+<h2>VO₂maxの数字だけを追わなくてもよい</h2>
+
+<p>
+VO₂maxは、
+自分の有酸素能力を把握するための便利な指標です。
+</p>
+
+<p>
+しかし、ランナーにとって最終的に重要なのは、
+VO₂maxの数字を上げることだけではありません。
+</p>
+
+<p>
+例えば、スマートウォッチのVO₂maxが変わっていなくても、
+レースタイムが伸びているなら、
+ランナーとしては十分に成長しています。
+</p>
+
+<p>
+反対に、VO₂maxの推定値が高く表示されても、
+実際のレースで十分に力を発揮できるとは限りません。
+</p>
+
+<div class="highlight-box">
+
+<strong>VO₂maxは走力を構成する一つの要素</strong>
+
+<p>
+レースタイム、VDOT、LTペース、
+普段の心拍数、走ったときの感覚なども合わせて確認すると、
+自分の成長をより正確に捉えやすくなります。
+</p>
+
+</div>
+
+<h2>VO₂maxをどのように活用する？</h2>
+
+<p>
+VO₂maxは、
+他人と優劣を競うためだけの数字ではありません。
+</p>
+
+<p>
+同じ測定方法や同じ機器で継続的に確認し、
+自分自身の変化を把握するために利用するのがおすすめです。
+</p>
+
+<ul>
+
+<li>トレーニングを続けたときの長期的な変化を見る</li>
+
+<li>レースタイムやVDOTと一緒に確認する</li>
+
+<li>疲労が強い時期の変化を確認する</li>
+
+<li>同じ心拍数に対する走行ペースの変化を見る</li>
+
+<li>一時的な上下だけで判断しない</li>
+
+</ul>
+
+<p>
+数値が上がったか下がったかだけを見るのではなく、
+実際の走りがどのように変わっているかも確認しましょう。
+</p>
+
+<h2>まとめ</h2>
+
+<p>
+VO₂maxは、
+運動中に身体が取り込み、
+利用できる酸素量の最大値を表す指標です。
+</p>
+
+<p>
+一般的には、
+体重1kgあたり1分間に利用できる酸素量として、
+<strong>ml/kg/分</strong>
+という単位で表されます。
+</p>
+
+<p>
+VO₂maxが高いことは、
+持久的な運動において有利な要素の一つです。
+</p>
+
+<p>
+しかし、実際のレースタイムには、
+LT能力、ランニングエコノミー、筋持久力、
+ペース配分なども関係します。
+</p>
+
+<p>
+スマートウォッチに表示されるVO₂maxは便利ですが、
+実測値ではなく推定値です。
+</p>
+
+<p>
+1回の数値に一喜一憂せず、
+同じ機器で確認した長期的な変化や、
+実際のレースタイムと合わせて活用しましょう。
+</p>
+
+<p>
+<strong>
+VO₂maxは身体の有酸素能力を表す指標、
+VDOTはレースで発揮した走力を表す実用的な指標です。
+</strong>
+</p>
+
+<p>
+どちらか一つだけを見るのではなく、
+複数の指標を組み合わせることで、
+自分の強みや課題を把握しやすくなります。
+</p>
+
+<section class="source-section">
+
+<h2>参考情報</h2>
+
+<ul class="source-links">
+
+<li>
+<a href="https://www.acsm.org/"
+target="_blank"
+rel="noopener noreferrer">
+American College of Sports Medicine
+</a>
+</li>
+
+<li>
+<a href="https://vdoto2.com/"
+target="_blank"
+rel="noopener noreferrer">
+V.O2
+</a>
+</li>
+
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/"
+target="_blank"
+rel="noopener noreferrer">
+PubMed
+</a>
+</li>
+
+</ul>
+
+</section>
+
+</article>
+
+<section class="related-section">
+
+<h2>関連ページ</h2>
+
+<div class="related-links">
+
+<a href="../vdot/">
+VDOTとは？VO₂maxとの違いや活用方法を解説
+</a>
+
+<a href="../lt/">
+LTペースとは？Tペースの意味や練習方法を解説
+</a>
+
+<a href="../e-pace/">
+Eペースとは？イージーランの効果や速さの目安を解説
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/3km-predictor/">
+3000m予測
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/10km-predictor/">
+10km予測
+</a>
+
+<a href="https://fvcmpbzj5v-arch.github.io/">
+由比ヶ浜ラボ トップページ
+</a>
+
+</div>
+
+</section>
+
+<div class="back-area">
+
+<a class="back-button" href="../">
+← コラム一覧へ戻る
+</a>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+
+© 2026 Yuigahama Lab
+
+</footer>
+
+</div>
+
+</body>
+</html>
